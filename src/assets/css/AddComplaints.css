@@ -1,0 +1,21 @@
+.van-picker__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+}
+
+/* .van-field__control {
+  position: relative;
+} */
+.van-field__control::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -5px;
+  border: 4px solid;
+  border-color: transparent transparent #757575 #757575;
+  transform: rotate(-45deg);
+  opacity: 0.8;
+  content: "";
+}

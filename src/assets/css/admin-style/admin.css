@@ -1,0 +1,212 @@
+
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  max-height:calc(100vh - 0px);
+  background-color: #ecf0f5;
+  overflow: hidden;
+}
+
+.main-content-wrapper {
+ 
+  left:213px;
+  margin-left: 0px;
+  transition: margin-left 0.3s ease;
+  max-width: 1900px;
+  width: 100%;
+  height: 100vh;
+  max-height:calc(100vh - 5px);
+  overflow: hidden;
+  padding-top: 60px;
+}
+.main-content-table{
+  padding: 80px 50px 0px 50px;
+  overflow: scroll !important;
+}
+
+.Period_History{
+  padding: 60px 5px 0px 15px;
+}
+.Period_History .periodhistory-title , .Period_History .setresultgame-title  , .add-bg-color-sub-header{
+  font-size: 18px;
+  padding:15px 10px !important;
+}
+.main-content-table .bi-arrow-down-up{
+  color:#5b7495;
+}
+
+.period_history_table table thead td, .table th {
+  padding: 9px 16px;
+}
+
+.period_history_table table thead{
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%)) !important;
+  color: white !important;
+  border: 0px solid #00000000 !important;
+}
+
+.period_history_table table  tbody tr{
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%)) !important;
+}
+
+/* .period_history_table table  tbody tr td{ 
+    background: rgb(2 30 58 / 48%) !important;
+
+} */
+
+.period_history_table nav ul li .page-link{
+font-size: 14px !important;
+}
+
+.select_bar select{
+  width: 59px;
+  height: 27px;
+  border: 0.1px solid #ccc;
+  padding-left: 6px;
+  font-size: 12px;
+  
+}
+
+.period_history_table{
+  padding:15px;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.content_main{
+overflow: scroll;
+   height: 98vh;
+}
+
+
+.content-header {
+  padding: 15px 0;
+  /* background: #fff; */
+  margin-bottom: 0px;
+}
+
+.content-body {
+  padding: 15px;
+}
+
+.statistics-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-tiles-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  width: fit-content;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.dashboard-tiles-card {
+  background:  #1c3a66;
+  color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-tiles-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-tiles-card h5 {
+  background: linear-gradient(60deg, #1f2028, #4f0bd3);
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.dashboard-tiles-card p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.content_main {
+  overflow: scroll;
+  height: 100vh;
+  max-height:calc(100vh - 102px);
+  padding-bottom: 50px;
+}
+
+.sidebar_overflow {
+  height: 98vh;
+  max-height: calc(100vh - 2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content-table {
+    padding: 20px 20px 19px 20px;
+}
+  .admin-layout {
+    display: flex;
+    height: 100vh;
+    max-height:calc(100vh - 102px);
+    background-color: #ecf0f5;
+    overflow: hidden;
+  }
+  .main-content-wrapper {
+  position:relative;
+  left:0px;
+  margin-left: 0px;
+  transition: margin-left 0.3s ease;
+  
+  height: 95vh;
+  max-height:calc(100vh - 60px);
+  overflow: hidden;
+}
+
+
+
+  .content-header {
+    padding: 10px 0;
+  }
+
+  .content-body {
+    padding: 10px;
+  }
+
+  .statistics-section {
+    padding: 15px;
+  }
+
+  .dashboard-tiles-card p {
+    font-size: 20px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+

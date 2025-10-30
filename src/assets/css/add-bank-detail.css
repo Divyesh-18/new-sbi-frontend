@@ -1,0 +1,157 @@
+.btn-continue {
+  width: 65%;
+  padding: 10px 0;
+  text-align: center;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  /* background: #e5599c; */
+  background:   var(--theme-color);
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.form-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  /* .appContent1 {
+    padding: 30px 30px 74px;
+  } */
+
+  .gocode.Disabled {
+    color: #a3a3a3 !important;
+    background-color: #dcdcdc !important;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+      0 1px 5px 0 rgb(0 0 0 / 12%);
+    opacity: 1;
+    font-size: 12px !important;
+    height: 45px;
+  }
+}
+
+/* loader-s  */
+
+.v-dialog {
+  box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%),
+    0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);
+  border-radius: 2px;
+  overflow: hidden;
+  pointer-events: auto;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 100%;
+  z-index: inherit;
+}
+
+.teal {
+  /* background-color: #e5599c !important;
+  border-color: #e5599c !important; */
+  background-color:   var(--theme-color) !important;
+  border-color:   var(--theme-color) !important;
+}
+
+.v-card__text {
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.v-progress-linear {
+  margin: 15px 0 5px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.white {
+  background-color: #fff !important;
+  border-color: #fff !important;
+}
+
+.v-progress-linear__bar__indeterminate .long,
+.v-progress-linear__bar__indeterminate .short {
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  will-change: left, right;
+  width: auto;
+  background-color: inherit;
+}
+
+.v-progress-linear__bar__indeterminate--active .long {
+  -webkit-animation: indeterminate-data;
+  animation: indeterminate-data;
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.v-progress-linear__bar__indeterminate--active .short {
+  -webkit-animation: indeterminate-short-data;
+  animation: indeterminate-short-data;
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes indeterminate-data {
+  0% {
+    left: -90%;
+    right: 100%;
+  }
+
+  60% {
+    left: -90%;
+    right: 100%;
+  }
+
+  100% {
+    left: 100%;
+    right: -35%;
+  }
+}
+
+@keyframes indeterminate-short-data {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+
+.all-violet-modal .btn-group .btn {
+  height: 36px;
+  padding: 5px 11px;
+}
+
+/* loader-e  */
+
+.appContent1-addbankcard {
+  padding: 30px;
+}
+.add-border-bottom {
+  border-bottom: 1px solid #919191;
+}
+.otp-width {
+  width: 95%;
+}
+.bank-color{
+   color:#7d7d7d;
+   font-size:13px;
+}

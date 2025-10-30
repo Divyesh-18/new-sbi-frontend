@@ -1,0 +1,89 @@
+.vcard h6 {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 58px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.welcome-header h1 {
+  /* color: #e5599c; */
+  color:   var(--theme-color);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding-top: 15px;
+  line-height: 28px;
+}
+.welcome-header h3 {
+  color: #9a9a9a;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding: 1px 0 15px;
+}
+.vcard .row .col-6 {
+  padding: 0 4px;
+}
+
+.postItem .jewellery-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 47px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 16px;
+}
+/* .postItem footer {
+  padding: 4px 8px;
+} */
+
+@media only screen and (max-width: 575px) {
+  .vcard.card {
+    padding: 8px 8px 0;
+  }
+
+  .vcard.mt-3 {
+    padding: 15px;
+  }
+
+  .vcard h6 {
+    height: 60px;
+    line-height: 17px;
+  }
+  .postItem .imageWrapper .image {
+    height: 200px;
+    padding: 8px;
+  }
+  /* .postItem footer {
+    padding: 8px 8px 4px;
+  } */
+  .postItem .imageWrapper {
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .appHeader .pageTitle {
+    padding-top: 5px;
+  }
+  .welcome-header h3 {
+    padding-bottom: 16px;
+  }
+  .welcome-header h1 {
+    padding-top: 14px;
+  }
+  .sectionTitle .vcard .vcard.card {
+    padding: 0;
+  }
+}

@@ -1,0 +1,191 @@
+.wallet-active-focus {
+  background-color: #f2f3f5 !important;
+}
+
+.top_nav .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_nav .right img {
+  width: 25px;
+  height: 25px;
+}
+
+.recharge {
+  background: #fafafa;
+  padding-bottom: 64px;
+}
+
+.top_text p {
+  margin-bottom: 0;
+}
+
+.top_text {
+  /* padding: 11px 15px; */
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.text_field {
+  /* padding: 30px 15px 15px; */
+  padding: 15px 30px 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #212121;
+}
+
+.text_field p {
+  margin-bottom: 0;
+}
+
+.payment_box .van-radio {
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+}
+
+.payment_box {
+  width: 100%;
+  /* padding-left: 4%; */
+  padding-left: 5%;
+  box-sizing: border-box;
+  /* margin-bottom: 10px; */
+}
+.walletwithdrawal-wrapper .payment_box {
+  padding-left: 4%;
+  margin-bottom: 10px;
+}
+
+.payment_text {
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #757575;
+  margin-bottom: 4px;
+}
+.walletwithdrawal-wrapper .payment_text {
+  height: 38px;
+  line-height: 38px;
+}
+
+.van-radio .text {
+  margin-left: 30px;
+  display: inline-block;
+  color: #212121;
+  font-size: 14px;
+}
+
+.van-radio__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.add_card {
+  margin-bottom: 5px;
+}
+
+.add_card .van-collapse {
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+.walletwithdrawal-wrapper .add_card .van-collapse {
+  padding: 15px;
+}
+
+.van-collapse-item .van-cell__title {
+  display: flex;
+  flex-direction: row;
+  color: #4e4e4e;
+}
+.walletwithdrawal-wrapper .van-collapse-item .van-cell__title {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.van-collapse-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 38px;
+}
+
+.nav_name {
+  font-size: 14px;
+  color: #4e4e4e;
+}
+
+.password_box {
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box_border {
+  border-bottom: 1px solid #949494;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.password_box .box_border img {
+  width: 24px;
+  height: 24px;
+}
+
+.password_box .box_border input {
+  width: 90%;
+  border: 0;
+  font-size: 14px;
+}
+
+.recharge_btn button {
+  /* background: #e5599c; */
+  background:   var(--theme-color);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 0;
+  padding: 11px 0;
+  text-align: center;
+  width: 52%;
+}
+
+.form-control.select2 {
+  font-size: 14px;
+  color: #4e4e4e !important;
+}
+
+.top_text-wallet {
+  padding: 11px 15px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* 
+.code_input img {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
+*/
+.withdrawal-input img{
+  margin-right: 5px;
+  height: 45%;
+  max-height: 40px;
+}
+
+@media only screen and (max-width: 450px) {
+  .withdrawal-img {
+       width: 23px !important;
+  }
+}
+

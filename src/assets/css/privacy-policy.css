@@ -1,0 +1,41 @@
+/* ul {
+  padding-left: 0;
+} */
+.main-privacy-policy {
+  padding: 10px 15px 15px 15px;
+  margin-top: 10px;
+}
+.main-privacy-policy p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 15px;
+}
+
+.main-privacy-policy b,
+strong {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.risk-agreement h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.5;
+}
+.risk-agreement p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 15px;
+}
+.remove_margin-block_start {
+  margin-block-start: 0 !important;
+}
+ul .add-list-dot {
+  list-style-type: disc;
+}

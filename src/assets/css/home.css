@@ -1,0 +1,98 @@
+/* #appCapsule {
+  background-color: #fafafa;
+} */
+
+.pleft {
+  padding-left: 3px;
+}
+
+.pright {
+  padding-right: 3px;
+}
+
+.height {
+  height: 56px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.height .pageTitle {
+  line-height: 52px;
+  padding-left: 180px;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo-img img {
+  width: 100%;
+  height: 100%;
+  max-width: 36px;
+}
+
+.appHeader1.height .text-left {
+  display: flex;
+  align-items: center;
+}
+
+.appHeader1 .left,
+.appHeader1 .right {
+  top: 0px;
+  /* font-size: 23px; */
+}
+
+.download-icons img {
+  width: 100%;
+  height: 100%;
+  max-width: 20px;
+  margin-bottom: 6px;
+}
+
+.welcome-header {
+  text-align: center;
+  background: #fafafa;
+}
+
+@media only screen and (max-width: 1200px) {
+  .height .pageTitle {
+    padding-left: 130px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .height .pageTitle {
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .height .pageTitle {
+    padding-left: 75px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .height .pageTitle {
+    padding-left: 45px;
+  }
+
+  .vcard.mt-3 {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .height .pageTitle {
+    padding-left: 19px;
+    font-weight: 400px !important;
+  }
+
+  .appHeader .pageTitle {
+    padding-top: 5px;
+  }
+}

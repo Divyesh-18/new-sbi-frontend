@@ -1,0 +1,1334 @@
+.main-sidebar .sidebar-fixed {
+  width: 272px !important;
+  transition: 0.5s;
+}
+.mini-sidebar .sidebar-fixed {
+  transition: 0.5s;
+  width: 80px !important;
+}
+.mini-sidebar p i {
+  transition: 0.5s;
+  font-size: 16px;
+}
+
+.sidebar-fixed {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 0;
+  z-index: 2;
+  /* width: 270px; */
+  /* width: 335px; */
+  /* top: 0; */
+}
+
+.navbar_part{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 255px !important;
+  background-color: #ffffff;
+  width: 70px;
+  height: 50px;
+  transition: 0.5s;
+}
+
+.navbar_part{
+  font-size: 1.7rem;
+  color: #000000;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.mini-sidebar {
+  position: relative;
+  /* width: 6%; */
+  height: 100vh;
+  overflow-y: scroll;
+  
+  z-index: 2;
+}
+.mini-sidebar .sidebar-item {
+  display: none;
+}
+
+.sidebar_overflow{
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+
+.sidebar-width {
+  width: 220px;
+}
+.main-sidebar .add-width-span {
+  min-width: 140px;
+}
+.set-tost {
+  margin-left: 300px;
+  width: 20%;
+  padding: 5px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 11px;
+  line-height: 2rem;
+  position: fixed;
+  top: 20%;
+  right: 1%;
+}
+.no-data-found p {
+  height: 100%;
+  line-height: 33px;
+  font-size: 16px;
+  text-align: center;
+  color: #000 !important;
+  margin-bottom: 0;
+}
+.switchButton {
+  /* background-color: #c90000; */
+  width: 80px;
+  text-align: center;
+  padding: 0 !important;
+  height: 30px;
+  outline: none;
+  border: 1px solid white;
+}
+.proper-table {
+  padding-left: 50px !important;
+}
+.action-alluser-btn {
+  padding: 0px !important;
+  margin: 2px 0;
+  width: 60px;
+  font-size: 10px;
+  height: 35px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.setcoustomewith {
+  min-width: 220px;
+}
+.main-sidebar .coustom-sidebar-width {
+  width: 231px;
+}
+.active-menu {
+  /* background-color: #67666d; */
+  color: rgb(255, 255, 255) !important;
+  min-width: 240px;
+  padding: 4px 0px;
+  margin: 0px 0px 0px 0px;
+  margin-bottom: 0 !important;
+}
+div.active-menu {
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  border-left: 1px solid #dd4b39;
+}
+div.active-menu a p {
+  margin-left: 12px !important;
+}
+.sidebar-bg-color-set {
+  background-color:  #1c3a66;
+}
+.add-bg-color-sub-header  {
+  color: #181b29;
+  /* font-size: 25px !important; */
+  /* border-bottom: 1px solid #181b29; */
+}
+
+.dashboard-tiles-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%)) !important;
+  color: white;
+  width: fit-content;
+  padding: 15px 20px !important;
+  margin-bottom: 20px;
+}
+
+.dashboard-tiles-card {
+  background:  #1c3a66;
+  color: white;
+  text-align: right;
+  padding: 20px 10px !important;
+  margin-bottom: 15px;
+}
+
+.dashboard-tiles-card h5 {
+  background: linear-gradient(60deg, #1f2028, #4f0bd3) !important;
+  padding: 5px 10px;
+}
+
+.dashboard-tiles-card p {
+  font-weight: bold;
+  font-size: 17px;
+  padding-right: 5px;
+}
+.add-select-2-coustom-style {
+  min-width: 50px !important;
+}
+
+.toggle-sidebar {
+  font-size: 20px;
+  position: fixed;
+  z-index: 3;
+  top: 12px !important;
+  left: 235px !important;
+  color: #fff;
+}
+
+@media only screen and (max-width: 575px) {
+  .main-sidebar {
+    z-index: 3;
+  }
+
+  .mini-sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .responsive-bottom-space {
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .sidebar-width {
+    width: 253px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .toggle-sidebar {
+    font-size: 24px;
+    top: 0.8%;
+    left: 12%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .toggle-sidebar {
+    top: 1%;
+    left: 10%;
+  }
+}
+
+
+
+@media (max-width: 1150px) {
+
+  .mini-sidebar {
+    position: relative;
+    /* width: 7%; */
+    height: 100vh;
+    overflow-y: scroll;
+    
+    z-index: 2;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-sidebar .sidebar-fixed {
+    width: 310px !important;
+    transition: 0.5s;
+}
+
+  .admin-layout[data-v-582fe7b1] {
+   
+    max-height: calc(100vh - 116px) !important;;
+    
+}
+.navbar-part-right{
+  height: 50px !important;
+}
+
+  .sidebar-fixed  {
+    position: relative !important;  
+   
+}
+.navbar_part {
+  display: none !important;
+}
+
+  .toggle-sidebar{
+    font-size: 15px;
+    position: fixed;
+    z-index: 3;
+    color: #000;
+    /* top: 1%;
+    left: 10%; */
+    top: 65px !important;
+    left: 30px !important;
+  }
+}
+
+@media (max-width: 595px){
+  .main-sidebar .sidebar-fixed {
+    width: 398px !important;
+    transition: 0.5s;
+}
+}
+
+/* SET RESULT GAME */
+
+.setresultgame-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+}
+
+.setresultgame-result-box {
+  background-color:  #1c3a66;
+  border: none;
+}
+
+.setresultgame-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.setresultgame-table thead tr th {
+  color: white;
+}
+
+.setresultgame-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.setresultgame-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.setresultgame-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* PERIOD HISTORY */
+
+
+
+.periodhistory-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.periodhistory-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.periodhistory-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.periodhistory-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.periodhistory-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.periodhistory-table thead tr th {
+  color: white;
+}
+
+.periodhistory-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.periodhistory-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.periodhistory-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* ALL USERS */
+
+.alluser-content {
+  padding: 10px !important;
+}
+
+.alluser-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.alluser-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.alluser-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.alluser-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.alluser-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.alluser-table thead tr th {
+  color: white;
+}
+
+.alluser-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.alluser-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.alluser-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+.loadings {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:200px;
+  /* left: 0; */
+  z-index: 15000;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.teals-loadings {
+  background-color:  #1c3a66 !important;
+  color: white;
+}
+/* USER TRANSACTION HISTORY */
+
+.user-transaction-history-content {
+  padding: 10px !important;
+}
+.user-transaction-history-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.user-transaction-history-result-box {
+  background-color:  #1c3a66;
+  border: none;
+  color: white;
+}
+.user-transaction-history-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.user-transaction-history-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.user-transaction-history-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.user-transaction-history-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.user-transaction-history-table thead tr th {
+  color: white;
+}
+
+.user-transaction-history-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.user-transaction-history-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.user-transaction-history-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* RECHARGE PENDING */
+
+.pending-recharge-content {
+  padding: 10px !important;
+}
+
+.pending-recharge-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.pending-recharge-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.pending-recharge-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.pending-recharge-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.pending-recharge-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.pending-recharge-table thead tr th {
+  color: white;
+}
+
+.pending-recharge-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.pending-recharge-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.pending-recharge-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* RECHARGE ACCEPT */
+
+.accept-recharge-content {
+  padding: 10px !important;
+}
+
+.accept-recharge-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.accept-recharge-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.accept-recharge-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.accept-recharge-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.accept-recharge-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.accept-recharge-table thead tr th {
+  color: white;
+}
+
+.accept-recharge-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.accept-recharge-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.accept-recharge-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* RECHARGE REJECT */
+
+.reject-recharge-content {
+  padding: 10px !important;
+}
+
+.reject-recharge-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.reject-recharge-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.reject-recharge-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.reject-recharge-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.reject-recharge-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.reject-recharge-table thead tr th {
+  color: white;
+}
+
+.reject-recharge-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.reject-recharge-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.reject-recharge-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* WITHDRAWAL REQUEST */
+
+.withdrawal-request-content {
+  padding: 10px !important;
+}
+
+.withdrawal-request-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.withdrawal-request-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.withdrawal-request-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.withdrawal-request-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.withdrawal-request-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.withdrawal-request-table thead tr th {
+  color: white;
+}
+
+.withdrawal-request-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.withdrawal-request-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.withdrawal-request-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* WITHDRAWAL ACCEPT */
+
+.withdrawal-accept-content {
+  padding: 10px !important;
+}
+
+.withdrawal-accept-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.withdrawal-accept-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.withdrawal-accept-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.withdrawal-accept-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.withdrawal-accept-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.withdrawal-accept-table thead tr th {
+  color: white;
+}
+
+.withdrawal-accept-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.withdrawal-accept-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.withdrawal-accept-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* WITHDRAWAL REJECT */
+
+.withdrawal-reject-content {
+  padding: 10px !important;
+}
+
+.withdrawal-reject-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.withdrawal-reject-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.withdrawal-reject-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.withdrawal-reject-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.withdrawal-reject-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.withdrawal-reject-table thead tr th {
+  color: white;
+}
+
+.withdrawal-reject-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.withdrawal-reject-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.withdrawal-reject-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* ADMIN ALL QUERIES */
+
+.all-queries-content {
+  padding: 10px !important;
+}
+
+.all-queries-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.all-queries-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.all-queries-table thead tr th {
+  color: white;
+}
+
+.all-queries-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.all-queries-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.all-queries-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* PERIOD BATEIN HISTORY */
+
+.period-bateing-history-content {
+  padding: 10px !important;
+}
+
+.period-bateing-history-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.period-bateing-history-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.period-bateing-history-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.period-bateing-history-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.period-bateing-history-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.period-bateing-history-table thead tr th {
+  color: white;
+}
+
+.period-bateing-history-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.period-bateing-history-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.period-bateing-history-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* ADMIN USER GAME HISTORY */
+
+.admin-user-game-history-content {
+  padding: 10px !important;
+}
+
+.admin-user-game-history-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-user-game-history-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.admin-user-game-history-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.admin-user-game-history-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.admin-user-game-history-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-user-game-history-table thead tr th {
+  color: white;
+}
+
+.admin-user-game-history-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-user-game-history-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.admin-user-game-history-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+
+/* ADMIN REFERID ALL USERS */
+
+.admin-referid-all-users-content {
+  padding: 10px !important;
+}
+
+.admin-referid-all-users-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-referid-all-users-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.admin-referid-all-users-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.admin-referid-all-users-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.admin-referid-all-users-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-referid-all-users-table thead tr th {
+  color: white;
+}
+
+.admin-referid-all-users-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-referid-all-users-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.admin-referid-all-users-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+.admin-referid-all-users-level-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+
+.login-btn {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+  padding: 10px !important;
+  width: 90px !important;
+}
+
+.Adminlogin-btn {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+  padding: 10px !important;
+  width: 90px !important;
+  float: inline-end;
+}
+
+/* ADMIN MANAGE BANNER */
+
+.admin-manage-banner-content {
+  padding: 10px !important;
+}
+
+.admin-manage-banner-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-manage-banner-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.admin-manage-banner-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.admin-manage-banner-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.admin-manage-banner-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-manage-banner-table thead tr th {
+  color: white;
+}
+
+.admin-manage-banner-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-manage-banner-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.admin-manage-banner-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+.admin-manage-banner-level-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+
+/* ADMIN SET LEVEL USER */
+
+.admin-set-level-user-content {
+  padding: 10px !important;
+}
+
+.admin-set-level-user-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-set-level-user-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.admin-set-level-user-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.admin-set-level-user-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.admin-set-level-user-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-set-level-user-table thead tr th {
+  color: white;
+}
+
+.admin-set-level-user-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-set-level-user-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.admin-set-level-user-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+.admin-set-level-user-level-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+
+/* ADMIN MANAGE PRODUCT */
+
+.admin-manage-product-content {
+  padding: 10px !important;
+}
+
+.admin-manage-product-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-manage-product-search-box {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.admin-manage-product-search-box label {
+  padding-right: 10px;
+  margin: auto;
+}
+
+.admin-manage-product-search-box input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 150px;
+}
+
+.admin-manage-product-table thead tr {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-manage-product-table thead tr th {
+  color: white;
+}
+
+.admin-manage-product-table tbody {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+}
+
+.admin-manage-product-table tbody tr td {
+  border: none;
+  color: white;
+}
+
+.admin-manage-product-pagination .page-item.active .page-link {
+  background: #337ab7 !important;
+  border-color: #337ab7 !important;
+}
+.admin-manage-product-level-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+
+/* ADD MANAGE BANNER */
+
+.admin-add-mannage-banner-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-add-mannage-banner-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+
+/* ADD PRODUCT */
+
+.admin-add-product-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-add-product-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+
+/* ADMIN NOTIFICATION */
+
+.admin-notification-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-notification-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+
+/* ADMIN SITE SETTING */
+
+.admin-site-setting-title {
+  background: linear-gradient(60deg, #222a30, rgb(42 109 207 / 87%));
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px !important;
+  border: none;
+}
+
+.admin-site-setting-buttons {
+  background-color:  #1c3a66 !important;
+  border-color:  #1c3a66 !important;
+  color: white;
+}
+.add-form-groups {
+  margin-bottom: 10px !important;
+}
+
+.login-set-tost {
+  position: fixed;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: #dedfe0;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.file-upload-error {
+  position: fixed !important;
+  top: 40% !important;
+  left: 60% !important;
+  transform: translate(-50%, -50%) !important;
+  background-color: #0e0a0a !important;
+  color: white !important;
+  padding: 10px !important;
+  border: 1px solid rgb(0, 0, 0) !important;
+}
+/* sidebar style  */
+
+.main-sidebar .coustom-add-width-sidebar-menu {
+  width: 220px;
+  cursor: pointer;
+  border: 1px solid  #1c3a66;
+}
+
+.add-table-data-in-center-width {
+  min-width: 152px;
+}
+.text-centers {
+  text-align: center !important;
+}

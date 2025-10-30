@@ -1,0 +1,201 @@
+@-webkit-keyframes load {
+  0%,
+  100% {
+    height: 40px;
+    background: #13d3c9;
+  }
+
+  50% {
+    height: 70px;
+    margin: -15px 0;
+    background: #1ee3dc;
+  }
+
+  70% {
+    height: 65px;
+    margin: -15px 0;
+    background: #1ee3dc;
+  }
+}
+
+.loading span:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+}
+
+.loading span:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+}
+
+.loading span:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+}
+
+.loading span:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+}
+
+.top-selete {
+  display: flex;
+  margin: 20px 15px 0;
+  border: 1px solid #00b8a9;
+  border-radius: 5px;
+}
+
+.order-outer-content {
+  position: relative;
+}
+
+.reservation-chunk {
+  display: flex;
+  padding: 10px 10px 7px;
+}
+
+.redrecord-content .redrecord-box {
+  margin: 0 20px 10px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.redrecord-content .redrecord-box .other {
+  display: flex;
+  align-items: center;
+}
+
+.redrecord-content .redrecord-box .other .left {
+  width: 35%;
+}
+
+.redrecord-content .redrecord-box .other .right {
+  width: 65%;
+}
+
+.redrecord-content .redrecord-box .other .left .money__row {
+  color: #00b8a9;
+  font-size: 24px;
+  word-break: break-word;
+}
+
+.redrecord-content .redrecord-box .other .left span {
+  display: block;
+}
+
+.redrecord-content .redrecord-box .other .left .received {
+  color: #828282;
+  padding-top: 8px;
+  font-size: 12px;
+}
+
+.redrecord-content .redrecord-box .other .left .money__row em {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.redrecord-content .redrecord-box .other .left .money__row .small {
+  color: #00b8a9;
+  font-size: 14px;
+  display: inline;
+}
+
+.redrecord-content .redrecord-box .other .right .right-box {
+  margin: 0 auto;
+  position: relative;
+}
+
+.redrecord-content .redrecord-box .other .right .type {
+  color: #000;
+  font-size: 16px;
+}
+
+.redrecord-content .redrecord-box .other .right .time {
+  color: #828282;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.redrecord-content .redrecord-box .other .right img {
+  width: 70px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.redrecord-content .redrecord-box .other .right .type {
+  color: #000;
+  font-size: 16px;
+}
+
+.redrecord-content .redrecord-box .other .right .time span {
+  display: block;
+  margin: 0.1rem;
+}
+
+/* .nav-tabs .nav-link {
+  color: #000;
+  border: 1px solid #40cabf;
+  border-radius: 5px;
+} */
+
+.recharge_box {
+  width: 100%;
+  padding: 15px 0px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.transactions-main-head {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.recharge_box_recharge {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+/* .appHeader1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+@media only screen and (max-width: 480px) {
+  .redrecord-content .redrecord-box .other .left {
+    width: 25%;
+  }
+
+  .redrecord-content .redrecord-box .other .right {
+    width: 75%;
+  }
+
+  .redrecord-content .redrecord-box .other .right .time span {
+    font-size: 12px;
+  }
+
+  .redrecord-content .redrecord-box .other .right img {
+    width: 33px;
+  }
+
+  .redrecord-content .redrecord-box .other .left .money__row {
+    font-size: 19px;
+  }
+}
+
+.AddEnvelope_select {
+  border: none;
+  width: 9.5rem;
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 8px;
+}

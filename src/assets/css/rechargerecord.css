@@ -1,0 +1,12 @@
+.list_box li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#app {
+  /* background: #fafafa; */
+  /* padding-bottom: 64px; */
+}
+.list_box-complaints li {
+  padding: 10px;
+}

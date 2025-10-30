@@ -1,0 +1,14 @@
+.completed_list .list_box {
+  /* padding: 10px 10px 5px; */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.list_box li ol .oddnum,
+.list_box li ol .times {
+  color: #757575;
+}
+
+.Transaction_table {
+  font-size: 14px;
+}

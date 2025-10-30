@@ -1,0 +1,157 @@
+[v-cloak] {
+  display: none;
+}
+/* 
+.null_data {
+  height: 33px;
+  line-height: 33px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 0;
+} */
+
+.pagination .page_btn .van-icon {
+  font-size: 14px;
+  color: black;
+}
+
+.right_info {
+  color: #fff;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right-que-icon {
+  border: 2px solid #fff;
+  padding: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-footer button {
+  color: #00897b;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: 0;
+  background: transparent;
+  margin: 0;
+}
+
+.Reward_Question {
+  width: 10rem;
+}
+
+.Reward_Paragraph {
+  font-size: 14px;
+  padding: 15px;
+  line-height: 1.5;
+  max-height: 47vh;
+  overflow-y: auto;
+  margin-bottom: 0;
+}
+
+.DropDown {
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 0.1rem 2rem;
+}
+
+.modal_header_intrest {
+  align-items: center;
+  top: 300px;
+  margin: 0px auto;
+  overflow: auto;
+  outline: 0px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  transform: translateY(0px);
+}
+
+.Model_Paragraph {
+  margin: 1rem 0rem;
+}
+
+.Instrest_Modal_Heading {
+  margin-left: 1rem;
+  font-size: 18px;
+}
+
+.Reward_select {
+  border: none;
+  width: 9.5rem;
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 8px;
+}
+
+.reward-explor-modal .modal-vue3-content {
+  width: 70% !important;
+  padding: 15px !important;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  /* top: 50% !important; */
+  top: 33.333% !important;
+  transform: translateY(-50%) !important;
+}
+
+.reward-explor-modal .modal-vue3-body {
+  padding: 0 !important;
+}
+
+.reward-explor-modal .modal-title {
+  font-size: 18px;
+  padding: 15px;
+  color: #000;
+}
+
+/* paggination */
+
+.choose_page_par .row-text {
+  color: rgba(0, 0, 0, 0.54) !important;
+  font-size: 12px !important;
+}
+
+.page_box_two .van-dropdown-menu__bar {
+  box-shadow: 0 2px 12px rgb(100 101 102 / 0%);
+  height: 28px;
+}
+
+.page_box_two .van-dropdown-menu__title {
+  padding: 0 8px;
+}
+.reward_q-marks {
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 480px) {
+  .modal_body .Reward_Paragraph {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reward-explor-modal .modal_body::before {
+    content: "";
+    position: absolute;
+    background: #bfbfbf;
+    width: 3px;
+    height: 120px;
+    right: 15px;
+  }
+}
+.recharge_box-reward-list {
+  width: 100%;
+  /* padding: 15px; */
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
