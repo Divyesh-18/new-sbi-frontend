@@ -52,7 +52,7 @@ Click to open APP payment
           </div>
           <div class="upi-payment-step">
             <span style="min-width: 52px">STEP 2:</span>
-            <input type="text" id="upi-input" value="" name="channel_order" placeholder="ENTER REF NO.:3033xxxxxxxx"
+            <input type="text" id="upi-input" value="" name="channel_order" placeholder="ENTER REF NO.:3033xxxxxxxx" m
               maxlength="12" oninput="this.value=this.value.replace(/[^\d]/g,'')"
               onchange="this.value=this.value.replace(/[^\d]/g,'')">
           </div>
@@ -203,7 +203,7 @@ export default {
         }
 
         const onSubmit = async (values) => {
-            if ($("#upi-input").val() >= 100000000000 && $("#upi-input").val() <= 999999999999) {
+            if ($("#upi-input").val().length >= 12) {
                 axios
                     .post("/recharge", {
                         amount: userammount.value,
