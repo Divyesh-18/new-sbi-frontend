@@ -6,7 +6,7 @@
   <div class="appHeader1">
     <div class="left">
       <a href="#" v-on:click="router.go(-1)" class="icon goBack">
-        <img :src="require('../assets/images/left.png')"  alt=""/>
+        <img :src="require('../assets/images/left.png')" alt="" />
       </a>
       <div class="pageTitle" style="font-weight: 500;">Add Complaints & Suggestion</div>
     </div>
@@ -93,25 +93,8 @@
   </div>
 
   <!-- loader -->
-  <div class="loading" v-show="loader" style="/* display: none; */">
-    <div class="v-dialog v-dialog--persistent" style="width: 300px; display: block;">
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text"><span>Loading</span>
-          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-linear mb-0"
-            style="height: 7px;">
-            <div class="v-progress-linear__background white" style="height: 7px; opacity: 0.3; width: 100%;"></div>
-            <div class="v-progress-linear__bar">
-              <div class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active">
-                <div class="v-progress-linear__bar__indeterminate long white"></div>
-                <div class="v-progress-linear__bar__indeterminate short white"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <Loader :isShow="loader" />
+  
   <Footer />
   <div id="alert" class="modal fade" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
@@ -124,7 +107,9 @@
     </div>
   </div>
   <div class="toast-content" v-show="isErrorShow">
-    <div class="toast-message" style="top: 50% !important;font-size: 14px;min-width: 120px;padding: 8px 12px;text-align: center;margin: 0 auto; position: fixed;">{{ errorMessage }}</div>
+    <div class="toast-message"
+      style="top: 50% !important;font-size: 14px;min-width: 120px;padding: 8px 12px;text-align: center;margin: 0 auto; position: fixed;">
+      {{ errorMessage }}</div>
   </div>
 </template>
 
@@ -134,13 +119,14 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { Form, Field, ErrorMessage } from "vee-validate";
 import Footer from "../components/CommonFooter.vue";
-
+import Loader from "../components/UserLoader.vue";
 export default {
   components: {
     Form,
     Field,
     ErrorMessage,
     Footer,
+    Loader
   },
   props: {
     toggleLoader: { type: Function },

@@ -205,7 +205,7 @@
                           <span style="color: rgb(76, 175, 80)" v-if="item.result_color === 'Green'">{{
                             item.result_color }}</span>
                           <span style="color: #ff0000" v-else-if="item.result_color === 'Red'">{{ item.result_color
-                          }}</span>
+                            }}</span>
                           <span style="color: rgb(156, 39, 176)" v-else-if="item.result_color === 'Violet'">{{
                             item.result_color }}</span>
                         </div>
@@ -289,7 +289,7 @@
             <ul class="page_box">
               <li class="page">
                 <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-                }} to {{ userresultsPage * userresultsPageRow }}
+                  }} to {{ userresultsPage * userresultsPageRow }}
                 </span>
               </li>
               <li class="page_btn">
@@ -418,7 +418,7 @@
           <ul class="page_box">
             <li class="page">
               <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-              }} to {{ userresultsPage * userresultsPageRow }}
+                }} to {{ userresultsPage * userresultsPageRow }}
               </span>
             </li>
             <li class="page_btn">
@@ -581,7 +581,7 @@
           <ul class="page_box">
             <li class="page">
               <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-              }} to {{ userresultsPage * userresultsPageRow }}
+                }} to {{ userresultsPage * userresultsPageRow }}
               </span>
             </li>
             <li class="page_btn">
@@ -659,7 +659,7 @@
                           <span style="color: rgb(76, 175, 80)" v-if="item.result_color === 'Green'">{{
                             item.result_color }}</span>
                           <span style="color: #ff0000" v-else-if="item.result_color === 'Red'">{{ item.result_color
-                          }}</span>
+                            }}</span>
                           <span style="color: rgb(156, 39, 176)" v-else-if="item.result_color === 'Violet'">{{
                             item.result_color }}</span>
                         </div>
@@ -742,7 +742,7 @@
             <ul class="page_box">
               <li class="page">
                 <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-                }} to {{ userresultsPage * userresultsPageRow }}
+                  }} to {{ userresultsPage * userresultsPageRow }}
                 </span>
               </li>
               <li class="page_btn">
@@ -759,25 +759,7 @@
   <div class="toast-content" style="position:fixed;top: 0px;bottom: 0px;left: 0px;right: 0px; display: none;">
     <div class="toast-message">{{ errorMessage }}</div>
   </div>
-  <div class="loading" v-show="loader" style="/* display: none; */">
-    <div class="v-dialog v-dialog--persistent" style="width: 300px; display: block;">
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text"><span>Loading</span>
-          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-linear mb-0"
-            style="height: 7px;">
-            <div class="v-progress-linear__background white" style="height: 7px; opacity: 0.3; width: 100%;"></div>
-            <div class="v-progress-linear__bar">
-              <div class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active">
-                <div class="v-progress-linear__bar__indeterminate long white"></div>
-                <div class="v-progress-linear__bar__indeterminate short white"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <Loader :isShow="loader" />
   <Footer />
   <PageReload />
 </template>
@@ -788,11 +770,12 @@ import axios from "axios";
 import { ref, watch } from "vue";
 import Footer from "../components/CommonFooter.vue";
 import PageReload from "../components/PageReload.vue";
-
+import Loader from "../components/UserLoader.vue"
 export default {
   components: {
     Footer,
     PageReload,
+    Loader
   },
   props: {
     toggleLoader: { type: Function },

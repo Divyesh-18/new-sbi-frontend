@@ -17,10 +17,7 @@
       <div class="pluse-icons">
         <router-link to="/addcomplaints">
           <a>
-            <img
-              :src="require('../assets/images/plus.png')"
-              style="height: 100%; max-height: 24px"
-            />
+            <img :src="require('../assets/images/plus.png')" style="height: 100%; max-height: 24px" />
           </a>
         </router-link>
       </div>
@@ -29,34 +26,18 @@
   <div class="complain-wrapper">
     <ul class="nav nav-tabs size2 level" id="myTab3" role="tablist">
       <li class="nav-item">
-        <a
-          v-on:click="tabb(1)"
-          :class="levelTab === 1 ? 'nav-link active' : 'nav-link'"
-          id="home-tab1"
-          data-toggle="tab"
-          role="tab"
-          >COMPLETED</a
-        >
+        <a v-on:click="tabb(1)" :class="levelTab === 1 ? 'nav-link active' : 'nav-link'" id="home-tab1"
+          data-toggle="tab" role="tab">COMPLETED</a>
       </li>
       <li class="nav-item">
-        <a
-          v-on:click="tabb(2)"
-          :class="levelTab === 2 ? 'nav-link active' : 'nav-link'"
-          data-toggle="tab"
-          role="tab"
-          >WAIT</a
-        >
+        <a v-on:click="tabb(2)" :class="levelTab === 2 ? 'nav-link active' : 'nav-link'" data-toggle="tab"
+          role="tab">WAIT</a>
       </li>
     </ul>
   </div>
   <div class=".appContent1-addbankcard listView">
     <div class="tab-content" id="myTabContent">
-      <div
-        v-if="levelTab === 1"
-        class="tab-pane fade active show"
-        id="level1"
-        role="tabpanel"
-      >
+      <div v-if="levelTab === 1" class="tab-pane fade active show" id="level1" role="tabpanel">
         <div>
           <ul class="list_box list_box-complaints">
             <li v-for="item in complitComplaintList" :key="item.complaint_id">
@@ -81,28 +62,20 @@
         <div class="pagination">
           <ul class="page_box">
             <li class="page">
-              <span
-                >{{
-                  complitComplaintsPage * complitComplaintsPageRow -
-                  complitComplaintsPageRow +
-                  1
-                }}-{{ complitComplaintsPage * complitComplaintsPageRow }}</span
-              >
+              <span>{{
+                complitComplaintsPage * complitComplaintsPageRow -
+                complitComplaintsPageRow +
+                1
+                }}-{{ complitComplaintsPage * complitComplaintsPageRow }}</span>
               of {{ totalComplitComplaints }}
             </li>
             <li class="page_btn">
-              <i
-                class="van-icon van-icon-arrow-left"
-                v-on:click="
+              <i class="van-icon van-icon-arrow-left" v-on:click="
                   handleComplitComplaintsPageChange(complitComplaintsPage - 1)
-                "
-              ></i>
-              <i
-                class="van-icon van-icon-arrow"
-                v-on:click="
+                "></i>
+              <i class="van-icon van-icon-arrow" v-on:click="
                   handleComplitComplaintsPageChange(complitComplaintsPage + 1)
-                "
-              ></i>
+                "></i>
             </li>
           </ul>
         </div>
@@ -112,28 +85,17 @@
             <div class="page_box_two">
               <div class="van-dropdown-menu">
                 <div class="van-dropdown-menu__bar">
-                  <div
-                    v-on:click="
+                  <div v-on:click="
                       complitComplaintsPageRowOpen =
                         !complitComplaintsPageRowOpen
-                    "
-                    role="button"
-                    tabindex="0"
-                    class="van-dropdown-menu__item"
-                  >
-                    <span
-                      class="van-dropdown-menu__title"
-                      :class="
+                    " role="button" tabindex="0" class="van-dropdown-menu__item">
+                    <span class="van-dropdown-menu__title" :class="
                         complitComplaintsPageRowOpen && 'pagination-up-arrow'
-                      "
-                    >
-                      <div
-                        class="van-ellipsis"
-                        :style="
+                      ">
+                      <div class="van-ellipsis" :style="
                           complitComplaintsPageRowOpen &&
                           'color: rgb(156, 39, 176) !important;'
-                        "
-                      >
+                        ">
                         {{ complitComplaintsPageRow }}
                       </div>
                     </span>
@@ -142,53 +104,29 @@
                 <div>
                   <div v-show="complitComplaintsPageRowOpen" class="">
                     <div class="pagination-parent">
-                      <div
-                        v-on:click="handleComplitComplaintsPageRowChange(10)"
-                        role="button"
-                        tabindex="0"
-                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active"
-                      >
+                      <div v-on:click="handleComplitComplaintsPageRowChange(10)" role="button" tabindex="0"
+                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active">
                         <div class="van-cell__title">
-                          <span
-                            :style="
+                          <span :style="
                               complitComplaintsPageRow === 10 &&
                               'color: rgb(156, 39, 176) !important;'
-                            "
-                          >
-                            10</span
-                          >
+                            ">
+                            10</span>
                         </div>
-                        <div
-                          v-show="complitComplaintsPageRow === 10"
-                          class="van-cell__value"
-                        >
-                          <i
-                            class="van-icon van-icon-success van-dropdown-item__icon"
-                          ></i>
+                        <div v-show="complitComplaintsPageRow === 10" class="van-cell__value">
+                          <i class="van-icon van-icon-success van-dropdown-item__icon"></i>
                         </div>
                       </div>
-                      <div
-                        v-on:click="handleComplitComplaintsPageRowChange(20)"
-                        role="button"
-                        tabindex="0"
-                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active"
-                      >
+                      <div v-on:click="handleComplitComplaintsPageRowChange(20)" role="button" tabindex="0"
+                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active">
                         <div class="van-cell__title">
-                          <span
-                            :style="
+                          <span :style="
                               complitComplaintsPageRow === 20 &&
                               'color: rgb(156, 39, 176) !important;'
-                            "
-                            >20</span
-                          >
+                            ">20</span>
                         </div>
-                        <div
-                          v-show="complitComplaintsPageRow === 20"
-                          class="van-cell__value"
-                        >
-                          <i
-                            class="van-icon van-icon-success van-dropdown-item__icon"
-                          ></i>
+                        <div v-show="complitComplaintsPageRow === 20" class="van-cell__value">
+                          <i class="van-icon van-icon-success van-dropdown-item__icon"></i>
                         </div>
                       </div>
                       <div data-v-483dad1f="" class="content"></div>
@@ -200,21 +138,12 @@
           </div>
         </div>
       </div>
-      <div
-        v-if="levelTab === 2"
-        class="tab-pane fade active show"
-        id="level2"
-        role="tabpanel"
-      >
+      <div v-if="levelTab === 2" class="tab-pane fade active show" id="level2" role="tabpanel">
         <div>
           <ul class="list_box">
-            <li
-              v-for="item in waitComplaintList"
-              :key="item.complaint_id"
-              v-on:click="
+            <li v-for="item in waitComplaintList" :key="item.complaint_id" v-on:click="
                 modeldata(item._id), (isComplenModalVisible = true), showModal()
-              "
-            >
+              ">
               <ol>
                 <p>{{ item.complait_for }}</p>
                 <p>{{ item.complaint_time }}</p>
@@ -222,17 +151,11 @@
               <ol>
                 <p>WhatsApp: {{ item.complait_subject }}</p>
                 <p v-show="!loader">
-                  <img
-                    :src="require('../assets/images/ghadi.png')"
-                    style="height: 100%; max-height: 24px"
-                  />
+                  <img :src="require('../assets/images/ghadi.png')" style="height: 100%; max-height: 24px" />
                 </p>
                 <p v-show="loader">
-                  <img
-                    :src="require('../assets/images/sign-in.png')"
-                    style="height: 100%; max-height: 24px"
-                    class="imgcolor"
-                  />
+                  <img :src="require('../assets/images/sign-in.png')" style="height: 100%; max-height: 24px"
+                    class="imgcolor" />
                 </p>
               </ol>
               <ol>
@@ -268,28 +191,20 @@
         <div class="pagination">
           <ul class="page_box">
             <li class="page">
-              <span
-                >{{
-                  waitComplaintsPage * waitComplaintsPageRow -
-                  waitComplaintsPageRow +
-                  1
-                }}-{{ waitComplaintsPage * waitComplaintsPageRow }}</span
-              >
+              <span>{{
+                waitComplaintsPage * waitComplaintsPageRow -
+                waitComplaintsPageRow +
+                1
+                }}-{{ waitComplaintsPage * waitComplaintsPageRow }}</span>
               of {{ totalWaitComplaints }}
             </li>
             <li class="page_btn">
-              <i
-                class="van-icon van-icon-arrow-left"
-                v-on:click="
+              <i class="van-icon van-icon-arrow-left" v-on:click="
                   handleWaitComplaintsPageChange(waitComplaintsPage - 1)
-                "
-              ></i>
-              <i
-                class="van-icon van-icon-arrow"
-                v-on:click="
+                "></i>
+              <i class="van-icon van-icon-arrow" v-on:click="
                   handleWaitComplaintsPageChange(waitComplaintsPage + 1)
-                "
-              ></i>
+                "></i>
             </li>
           </ul>
         </div>
@@ -299,27 +214,16 @@
             <div class="page_box_two">
               <div class="van-dropdown-menu">
                 <div class="van-dropdown-menu__bar">
-                  <div
-                    v-on:click="
+                  <div v-on:click="
                       waitComplaintsPageRowOpen = !waitComplaintsPageRowOpen
-                    "
-                    role="button"
-                    tabindex="0"
-                    class="van-dropdown-menu__item"
-                  >
-                    <span
-                      class="van-dropdown-menu__title"
-                      :class="
+                    " role="button" tabindex="0" class="van-dropdown-menu__item">
+                    <span class="van-dropdown-menu__title" :class="
                         waitComplaintsPageRowOpen && 'pagination-up-arrow'
-                      "
-                    >
-                      <div
-                        class="van-ellipsis"
-                        :style="
+                      ">
+                      <div class="van-ellipsis" :style="
                           waitComplaintsPageRowOpen &&
                           'color: rgb(156, 39, 176) !important;'
-                        "
-                      >
+                        ">
                         {{ waitComplaintsPageRow }}
                       </div>
                     </span>
@@ -328,53 +232,29 @@
                 <div>
                   <div v-show="waitComplaintsPageRowOpen" class="">
                     <div class="pagination-parent">
-                      <div
-                        v-on:click="handleWaitComplaintsPageRowChange(10)"
-                        role="button"
-                        tabindex="0"
-                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active"
-                      >
+                      <div v-on:click="handleWaitComplaintsPageRowChange(10)" role="button" tabindex="0"
+                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active">
                         <div class="van-cell__title">
-                          <span
-                            :style="
+                          <span :style="
                               waitComplaintsPageRow === 10 &&
                               'color: rgb(156, 39, 176) !important;'
-                            "
-                          >
-                            10</span
-                          >
+                            ">
+                            10</span>
                         </div>
-                        <div
-                          v-show="waitComplaintsPageRow === 10"
-                          class="van-cell__value"
-                        >
-                          <i
-                            class="van-icon van-icon-success van-dropdown-item__icon"
-                          ></i>
+                        <div v-show="waitComplaintsPageRow === 10" class="van-cell__value">
+                          <i class="van-icon van-icon-success van-dropdown-item__icon"></i>
                         </div>
                       </div>
-                      <div
-                        v-on:click="handleWaitComplaintsPageRowChange(20)"
-                        role="button"
-                        tabindex="0"
-                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active"
-                      >
+                      <div v-on:click="handleWaitComplaintsPageRowChange(20)" role="button" tabindex="0"
+                        class="van-cell van-cell--clickable van-dropdown-item__option van-dropdown-item__option--active">
                         <div class="van-cell__title">
-                          <span
-                            :style="
+                          <span :style="
                               waitComplaintsPageRow === 20 &&
                               'color: rgb(156, 39, 176) !important;'
-                            "
-                            >20</span
-                          >
+                            ">20</span>
                         </div>
-                        <div
-                          v-show="waitComplaintsPageRow === 20"
-                          class="van-cell__value"
-                        >
-                          <i
-                            class="van-icon van-icon-success van-dropdown-item__icon"
-                          ></i>
+                        <div v-show="waitComplaintsPageRow === 20" class="van-cell__value">
+                          <i class="van-icon van-icon-success van-dropdown-item__icon"></i>
                         </div>
                       </div>
                       <div data-v-483dad1f="" class="content"></div>
@@ -424,59 +304,28 @@
       <div class="modal-body coustom-padding-add">
         <div class="form-group">
           <label for="name">Type</label>
-          <Field
-            type="text"
-            disabled
-            v-model="modeldata1.complait_for"
-            :rules="validatetype"
-            name="type"
-            id="type"
-            onKeyPress=""
-            class="form-control"
-          />
+          <Field type="text" disabled v-model="modeldata1.complait_for" :rules="validatetype" name="type" id="type"
+            onKeyPress="" class="form-control" />
           <ErrorMessage name="type" />
         </div>
         <div class="form-group">
           <label for="ifsc">Out Id</label>
-          <Field
-            type="text"
-            disabled
-            v-model="modeldata1.complait_id"
-            :rules="validateOutId"
-            name="OutId"
-            id="OutId"
-            onKeyPress=""
-            class="form-control"
-          />
+          <Field type="text" disabled v-model="modeldata1.complait_id" :rules="validateOutId" name="OutId" id="OutId"
+            onKeyPress="" class="form-control" />
           <ErrorMessage name="OutId" />
         </div>
         <div class="form-group">
           <label for="bank">WhatsApp</label>
-          <Field
-            type="text"
-            disabled
-            v-model="modeldata1.complait_subject"
-            :rules="validateWhatsApp"
-            name="WhatsApp"
-            id="WhatsApp"
-            onKeyPress=""
-            class="form-control"
-          />
+          <Field type="text" disabled v-model="modeldata1.complait_subject" :rules="validateWhatsApp" name="WhatsApp"
+            id="WhatsApp" onKeyPress="" class="form-control" />
           <ErrorMessage name="WhatsApp" />
         </div>
         <div class="form-group">
           <label for="account">Description</label>
           <!-- <Field type="textarea" disabled v-model="modeldata1?.complaint_text" :rules="validateDescription"
             name="Description" id="Description" onKeyPress="" class="form-control" /> -->
-          <textarea
-            disabled
-            v-model="modeldata1.complait_text"
-            :rules="validateDescription"
-            name="Description"
-            id="Description"
-            onKeyPress=""
-            class="form-control"
-          ></textarea>
+          <textarea disabled v-model="modeldata1.complait_text" :rules="validateDescription" name="Description"
+            id="Description" onKeyPress="" class="form-control"></textarea>
           <ErrorMessage name="Description" />
         </div>
         <div class="">
@@ -487,12 +336,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          data-dismiss="modal"
-          v-on:click="(isComplenModalVisible = false), hideModal()"
-        >
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          v-on:click="(isComplenModalVisible = false), hideModal()">
           Close
         </button>
       </div>
@@ -516,42 +361,7 @@
   </div>
 
   <!-- loader -->
-  <div class="loading" v-show="loader" style="/* display: none; */">
-    <div
-      class="v-dialog v-dialog--persistent"
-      style="width: 300px; display: block"
-    >
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text">
-          <span>Loading</span>
-          <div
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            class="v-progress-linear mb-0"
-            style="height: 7px"
-          >
-            <div
-              class="v-progress-linear__background white"
-              style="height: 7px; opacity: 0.3; width: 100%"
-            ></div>
-            <div class="v-progress-linear__bar">
-              <div
-                class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active"
-              >
-                <div
-                  class="v-progress-linear__bar__indeterminate long white"
-                ></div>
-                <div
-                  class="v-progress-linear__bar__indeterminate short white"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Loader :isShow="loader" />
   <PageReload />
 </template>
 
@@ -563,6 +373,7 @@ import { Modal } from "usemodal-vue3";
 import { Field, ErrorMessage } from "vee-validate";
 import Footer from "../components/CommonFooter.vue";
 import PageReload from "../components/PageReload.vue";
+import Loader from "../components/UserLoader.vue";
 
 export default {
   components: {
@@ -571,6 +382,7 @@ export default {
     Modal,
     Footer,
     PageReload,
+    Loader
   },
   props: {
     toggleLoader: { type: Function },

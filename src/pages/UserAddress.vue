@@ -12,10 +12,7 @@
       <div class="pluse-icons">
         <router-link to="/addaddress">
           <a>
-            <img
-              :src="require('../assets/images/plus.png')"
-              style="height: 100%; max-height: 24px"
-            />
+            <img :src="require('../assets/images/plus.png')" style="height: 100%; max-height: 24px" />
           </a>
         </router-link>
       </div>
@@ -37,29 +34,15 @@
           <p class="info_text">{{ item.address }}</p>
         </ol>
         <ol class="right_icon">
-          <img
-            :src="require('../assets/images/information.png')"
-            alt=""
-            v-on:click="ttt(item._id, item.full_name)"
-          />
+          <img :src="require('../assets/images/information.png')" alt="" v-on:click="ttt(item._id, item.full_name)" />
         </ol>
       </li>
     </ul>
   </div>
-  <div
-    class="van-overlay"
-    v-show="isEditModalVisible"
-    style="z-index: 2001"
-    v-on:click="(isEditModalVisible = false), hideModal()"
-  ></div>
-  <div
-    id="pouiuii"
-    class="modal1 bd-example-modal-lg edit-modal"
-    :class="isEditModalVisible === false ? 'yyy' : ''"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="myLargeModalLabel"
-  >
+  <div class="van-overlay" v-show="isEditModalVisible" style="z-index: 2001"
+    v-on:click="(isEditModalVisible = false), hideModal()"></div>
+  <div id="pouiuii" class="modal1 bd-example-modal-lg edit-modal" :class="isEditModalVisible === false ? 'yyy' : ''"
+    tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" style="z-index: 2002 !important">
       <div class="modal-content">
         <div class="modal-body">
@@ -91,22 +74,9 @@
 
   <!-- Delete POPUP -->
   <div class="confirm-passwrd">
-    <Modal
-      v-model:visible="isLogoutModalVisible"
-      :maskClosable="false"
-      height="auto"
-      width="70%"
-      offsetTop="28%"
-    >
-      <div
-        style="background: #fff; border-bottom: 0px !important"
-        class="modal-header"
-      >
-        <h5
-          class="modal-title"
-          id="exampleModalLabel"
-          style="color: #000; font-size: 25px"
-        >
+    <Modal v-model:visible="isLogoutModalVisible" :maskClosable="false" height="auto" width="70%" offsetTop="28%">
+      <div style="background: #fff; border-bottom: 0px !important" class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: #000; font-size: 25px">
           Confirm
         </h5>
         <!-- <button type="button" class="close" v-on:click="isLogoutModalVisible = false" aria-label="Close">
@@ -121,16 +91,10 @@
         </div>
       </div>
       <div class="modal-footer" style="border-top: 0px !important">
-        <a
-          type="button"
-          class="text-secondary"
-          v-on:click="(isLogoutModalVisible = false), hideModal()"
-        >
+        <a type="button" class="text-secondary" v-on:click="(isLogoutModalVisible = false), hideModal()">
           CANCEL
         </a>
-        <a type="button" class="text-danger h1" v-on:click="delete_row()"
-          >Delete</a
-        >
+        <a type="button" class="text-danger h1" v-on:click="delete_row()">Delete</a>
       </div>
     </Modal>
   </div>
@@ -140,42 +104,7 @@
   </div>
 
   <Footer />
-  <div class="loading" v-show="loader" style="/* display: none; */">
-    <div
-      class="v-dialog v-dialog--persistent"
-      style="width: 300px; display: block"
-    >
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text">
-          <span>Loading</span>
-          <div
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            class="v-progress-linear mb-0"
-            style="height: 7px"
-          >
-            <div
-              class="v-progress-linear__background white"
-              style="height: 7px; opacity: 0.3; width: 100%"
-            ></div>
-            <div class="v-progress-linear__bar">
-              <div
-                class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active"
-              >
-                <div
-                  class="v-progress-linear__bar__indeterminate long white"
-                ></div>
-                <div
-                  class="v-progress-linear__bar__indeterminate short white"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Loader :isShow="loader" />
   <div id="alert" class="modal fade" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
@@ -194,12 +123,14 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Footer from "../components/CommonFooter.vue";
 import { Modal } from "usemodal-vue3";
+import Loader from "../components/UserLoader.vue"
 
 export default {
   name: "UserAddress",
   components: {
     Footer,
     Modal,
+    Loader
   },
   //   props: {
   //     toggleLoader: { type: Function },

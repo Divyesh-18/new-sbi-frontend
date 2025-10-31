@@ -82,25 +82,7 @@
   </div>
   <Footer />
   <PageReload />
-  <div class="loading" v-show="loader">
-    <div class="v-dialog v-dialog--persistent" style="width: 300px; display: block">
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text">
-          <span>Downloading</span>
-          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-linear mb-0"
-            style="height: 7px">
-            <div class="v-progress-linear__background white" style="height: 7px; opacity: 0.3; width: 100%"></div>
-            <div class="v-progress-linear__bar">
-              <div class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active">
-                <div class="v-progress-linear__bar__indeterminate long white"></div>
-                <div class="v-progress-linear__bar__indeterminate short white"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Loader :isShow="loader" />
 </template>
 
 <script>
@@ -112,6 +94,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import PageReload from "../components/PageReload.vue";
 import { Autoplay } from "swiper/modules";
+import Loader from "../components/UserLoader.vue"
 import axios from "axios";
 export default {
   rules: {
@@ -122,6 +105,7 @@ export default {
     Swiper,
     SwiperSlide,
     PageReload,
+    Loader
   },
   props: {
     toggleLoader: { type: Function },

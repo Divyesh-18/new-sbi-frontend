@@ -25,105 +25,45 @@
         <div class="level-main-tab">
           <ul class="nav nav-tabs size2" id="myTab3" role="tablist">
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 1), this.teemData()"
-                :class="endLevel == 1 ? 'bg-#ddd' : 'bg-white'"
-                >Level 1<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 1), this.teemData()"
+                :class="endLevel == 1 ? 'bg-#ddd' : 'bg-white'">Level 1<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 2), this.teemData()"
-                :class="endLevel == 2 ? 'bg-#ddd' : 'bg-white'"
-                >Level 2<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 2), this.teemData()"
+                :class="endLevel == 2 ? 'bg-#ddd' : 'bg-white'">Level 2<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 3), this.teemData()"
-                :class="endLevel == 3 ? 'bg-#ddd' : 'bg-white'"
-                >Level 3<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 3), this.teemData()"
+                :class="endLevel == 3 ? 'bg-#ddd' : 'bg-white'">Level 3<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 4), this.teemData()"
-                :class="endLevel == 4 ? 'bg-#ddd' : 'bg-white'"
-                >Level 4<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 4), this.teemData()"
+                :class="endLevel == 4 ? 'bg-#ddd' : 'bg-white'">Level 4<span id="al1"></span></a>
             </li>
 
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 5), this.teemData()"
-                :class="endLevel == 5 ? 'bg-#ddd' : 'bg-white'"
-                >Level 5<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 5), this.teemData()"
+                :class="endLevel == 5 ? 'bg-#ddd' : 'bg-white'">Level 5<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 6), this.teemData()"
-                :class="endLevel == 6 ? 'bg-#ddd' : 'bg-white'"
-                >Level 6<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 6), this.teemData()"
+                :class="endLevel == 6 ? 'bg-#ddd' : 'bg-white'">Level 6<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 7), this.teemData()"
-                :class="endLevel == 7 ? 'bg-#ddd' : 'bg-white'"
-                >Level 7<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 7), this.teemData()"
+                :class="endLevel == 7 ? 'bg-#ddd' : 'bg-white'">Level 7<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 8), this.teemData()"
-                :class="endLevel == 8 ? 'bg-#ddd' : 'bg-white'"
-                >Level 8<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 8), this.teemData()"
+                :class="endLevel == 8 ? 'bg-#ddd' : 'bg-white'">Level 8<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 9), this.teemData()"
-                :class="endLevel == 9 ? 'bg-#ddd' : 'bg-white'"
-                >Level 9<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 9), this.teemData()"
+                :class="endLevel == 9 ? 'bg-#ddd' : 'bg-white'">Level 9<span id="al1"></span></a>
             </li>
             <li class="nav-item w-20">
-              <a
-                class="nav-link active"
-                id="home-tab3"
-                role="tab"
-                v-on:click="(endLevel = 10), this.teemData()"
-                :class="endLevel == 10 ? 'bg-#ddd' : 'bg-white'"
-                >Level 10<span id="al1"></span
-              ></a>
+              <a class="nav-link active" id="home-tab3" role="tab" v-on:click="(endLevel = 10), this.teemData()"
+                :class="endLevel == 10 ? 'bg-#ddd' : 'bg-white'">Level 10<span id="al1"></span></a>
             </li>
           </ul>
         </div>
@@ -133,10 +73,7 @@
             <div class="tab-pane fade active show" id="level1" role="tabpanel">
               <div class="">
                 <div class="">
-                  <div
-                    style="overflow-x: auto"
-                    class="table-container listView set-shadow"
-                  >
+                  <div style="overflow-x: auto" class="table-container listView set-shadow">
                     <!-- <div class="custom-search-my-team">
                       <div class="van-search__content van-search__content--square">
                         <div class="van-cell van-cell--borderless van-field">
@@ -178,39 +115,28 @@
                           </td>
                         </tr>
 
-                        <tr
-                          v-for="(item, index) in userTeemData"
-                          :key="index + 1"
-                        >
+                        <tr v-for="(item, index) in userTeemData" :key="index + 1">
                           <td>{{ index + 1 }}</td>
 
                           <td>
                             {{
-                              endLevel == 1
-                                ? item?.mobile
-                                : hideMobile(item?.mobile.toString())
+                            endLevel == 1
+                            ? item?.mobile
+                            : hideMobile(item?.mobile.toString())
                             }}
                           </td>
 
                           <td>
-                            <span
-                              class="rewartdstatuts"
-                              style="background: green"
-                              v-if="
+                            <span class="rewartdstatuts" style="background: green" v-if="
                                 item?.userTotleRechargeAmount?.rechargeAmount
-                              "
-                            ></span>
-                            <span
-                              class="rewartdstatuts"
-                              style="background: red"
-                              v-else
-                            ></span>
+                              "></span>
+                            <span class="rewartdstatuts" style="background: red" v-else></span>
                           </td>
                           <td>
                             {{
-                              item?.userTotleRechargeAmount
-                                ? item?.userTotleRechargeAmount?.rechargeAmount
-                                : 0
+                            item?.userTotleRechargeAmount
+                            ? item?.userTotleRechargeAmount?.rechargeAmount
+                            : 0
                             }}
                           </td>
                         </tr>
@@ -376,9 +302,7 @@
   </div>
 
   <div class="toast-content" v-show="isErrorShow">
-    <div
-      class="toast-message"
-      style="
+    <div class="toast-message" style="
         top: 50% !important;
         font-size: 14px;
         min-width: 120px;
@@ -386,49 +310,13 @@
         text-align: center;
         margin: 0 auto;
         position: fixed;
-      "
-    >
+      ">
       {{ errorMessage }}
     </div>
   </div>
 
   <!-- loader -->
-  <div class="loading" v-show="loader" style="/* display: none; */">
-    <div
-      class="v-dialog v-dialog--persistent"
-      style="width: 300px; display: block"
-    >
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text">
-          <span>Loading</span>
-          <div
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            class="v-progress-linear mb-0"
-            style="height: 7px"
-          >
-            <div
-              class="v-progress-linear__background white"
-              style="height: 7px; opacity: 0.3; width: 100%"
-            ></div>
-            <div class="v-progress-linear__bar">
-              <div
-                class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active"
-              >
-                <div
-                  class="v-progress-linear__bar__indeterminate long white"
-                ></div>
-                <div
-                  class="v-progress-linear__bar__indeterminate short white"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Loader :isShow="loader" />
 </template>
 
 <script>
@@ -436,7 +324,7 @@ import axios from "axios";
 // import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Footer from "../components/CommonFooter.vue";
-
+import Loader from "../components/UserLoader.vue"
 export default {
   data() {
     return {
@@ -452,6 +340,7 @@ export default {
   },
   components: {
     Footer,
+    Loader
   },
   methods: {
     async teemData() {

@@ -106,24 +106,7 @@
   <Footer />
 
   <!-- loader -->
-  <div class="loading" v-show="loader" style="/* display: none; */">
-    <div class="v-dialog v-dialog--persistent" style="width: 300px; display: block;">
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text"><span>Loading</span>
-          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-linear mb-0"
-            style="height: 7px;">
-            <div class="v-progress-linear__background white" style="height: 7px; opacity: 0.3; width: 100%;"></div>
-            <div class="v-progress-linear__bar">
-              <div class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active">
-                <div class="v-progress-linear__bar__indeterminate long white"></div>
-                <div class="v-progress-linear__bar__indeterminate short white"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Loader :isShow="loader" />
 
   <PageReload />
 </template>
@@ -135,13 +118,14 @@ import { useRouter } from "vue-router";
 import Footer from "../components/CommonFooter.vue";
 import { Modal } from "usemodal-vue3";
 import PageReload from "../components/PageReload.vue";
-
+import Loader from "../components/UserLoader.vue";
 
 export default {
   components: {
     Footer,
     Modal,
     PageReload,
+    Loader
   },
   setup() {
     // useMeta({ title: "Bank Card Page" });
