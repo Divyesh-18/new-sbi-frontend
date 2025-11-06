@@ -38,7 +38,7 @@
               background-color: #305ac2;
               margin-top: 20px;
               margin-bottom: 10px;
-              padding: 10px 10px 14px 10px;
+              padding: 0px 10px 8px;
               border-radius: 10px;
             ">
             <i data-v-58cd6e5d="" role="img" class="n-icon" style="
