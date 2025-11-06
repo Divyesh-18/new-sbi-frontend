@@ -46,6 +46,7 @@ import oneMinTrend from "@/pages/GameWin/oneMinGame/oneMinTrend.vue";
 import NewPayment from "../pages/NewPayment.vue";
 import UpiPayment from "../pages/upiPayment.vue";
 import USDTPayment from "../pages/USDTpayment.vue";
+import fastWinOrder from "../pages/GameWin/fastWinGame/oneMinuteOrder.vue";
 
 export const routes = [
   {
@@ -277,5 +278,10 @@ export const routes = [
     path: "/usdt-payment",
     name: "USDTPayment",
     component: USDTPayment
+  },
+  {
+    path: "/fastwinorder",
+    name: "fastWinOrder",
+    component: fastWinOrder,
   }
 ];

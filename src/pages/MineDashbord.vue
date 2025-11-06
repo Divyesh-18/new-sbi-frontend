@@ -88,6 +88,19 @@
             </h2>
           </div>
         </router-link> -->
+        <router-link to="/fastwinorder">
+          <div class="card-header">
+            <h2 class="mb-0">
+              <a class="btn btn-link collapsed">
+                <div class="set-i-width">
+                  <img :src="require('../assets/images/order.png')" class="dollar-img add-margin" />
+                </div>
+                Fast Win Orders
+              </a>
+              <i class="bi bi-chevron-down add-icon-size"></i>
+            </h2>
+          </div>
+        </router-link>
         <router-link to="/oneminuteorder">
           <div class="card-header">
             <h2 class="mb-0">

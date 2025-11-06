@@ -57,6 +57,20 @@
             </div>
           </div>
           <div class="" v-show="(isOpenResultMenu(), isResultMenuOpen)">
+            <router-link to="/dgklhtobgoijbrtoidfbgfgerjot/fast/win/result/set" class="text-white">
+              <div class="coustom-add-width-sidebar-menu"
+                :class="{ 'active-menu': $route.path === '/dgklhtobgoijbrtoidfbgfgerjot/fast/win/result/set' }">
+                <div>
+                  <p class="text-capitalize fs-2 fw-bold d-flex align-items-center pl-2 ml-2 coustom-sidebar-width"
+                    :class="{
+  'active-menu': $route.path === '/dgklhtobgoijbrtoidfbgfgerjot/fast/win/result/set',
+                    }">
+                    <i class="fa fa-dashboard mr-1 text-white"></i>
+                    <span v-bind:class="'sidebar-item'">Fast Win Result</span>
+                  </p>
+                </div>
+              </div>
+            </router-link>
             <router-link to="/dgklhtobgoijbrtoidfbgfgerjot/oneMinResultSet" class="text-white">
               <div class="coustom-add-width-sidebar-menu"
                 :class="{ 'active-menu': $route.path === '/dgklhtobgoijbrtoidfbgfgerjot/oneMinResultSet' }">
@@ -102,6 +116,21 @@
           </div>
           <!--Period History Drop Down Option -->
           <div class="" v-show="(isOpenPeriodHistoryMenu(), isPeriodHistoryMenuOpen)">
+            <router-link to="/dgklhtobgoijbrtoidfbgfgerjot/fast/win/period/history" class="text-white">
+              <div class="coustom-add-width-sidebar-menu"
+                :class="{ 'active-menu': $route.path === '/dgklhtobgoijbrtoidfbgfgerjot/fast/win/period/history' }">
+                <div>
+                  <p class="text-capitalize fs-2 pl-2 fw-bold d-flex align-items-center ml-2 coustom-sidebar-width"
+                    :class="{
+  'active-menu': $route.path === '/dgklhtobgoijbrtoidfbgfgerjot/fast/win/period/history',
+                    }">
+                    <!-- <i class="bi bi-clock-history mr-1 text-white"></i> -->
+                    <i class="fa fa-dashboard mr-1 text-white"></i>
+                    <span v-bind:class="'sidebar-item'">Fast Win  History</span>
+                  </p>
+                </div>
+              </div>
+            </router-link>
             <router-link to="/dgklhtobgoijbrtoidfbgfgerjot/one-minute-period-history" class="text-white">
               <div class="coustom-add-width-sidebar-menu"
                 :class="{ 'active-menu': $route.path === '/dgklhtobgoijbrtoidfbgfgerjot/one-minute-period-history' }">
@@ -566,6 +595,7 @@ export default {
     },
     isOpenPeriodHistoryMenu() {
       if (
+        this.$route.path === "/dgklhtobgoijbrtoidfbgfgerjot/fast/win/period/history" ||
         this.$route.path === "/dgklhtobgoijbrtoidfbgfgerjot/one-minute-period-history" ||
         this.$route.path === "/dgklhtobgoijbrtoidfbgfgerjot/periodhistory"
       ) {
@@ -574,6 +604,7 @@ export default {
     },
     isOpenResultMenu() {
       if (
+        this.$route.path === "/dgklhtobgoijbrtoidfbgfgerjot/fast/win/result/set" ||
         this.$route.path === '/dgklhtobgoijbrtoidfbgfgerjot/setresultgame' ||
         this.$route.path === "/dgklhtobgoijbrtoidfbgfgerjot/oneMinResultSet"
       ) {

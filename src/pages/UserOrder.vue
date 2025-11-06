@@ -7,7 +7,7 @@
       <a href="#" v-on:click="router.go(-1)" class="icon goBack">
         <img :src="require('../assets/images/left.png')" />
       </a>
-      <div class="pageTitle">Three Minute Orders</div>
+      <div class="pageTitle">WinGo Three Minute Orders</div>
     </div>
   </div>
   <div class="order-wrapper">

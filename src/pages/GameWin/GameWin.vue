@@ -11,12 +11,15 @@
       <ul class="main_nav">
         <li class="active" v-on:click="router.go(0)">Parity</li>
       </ul>
-      <div class="btn-r">
-        <button class="one_btn btn" :class="{ active: isOneMinuteGame }" @click="selectTime('1min')">
-          1 Minute Game
+      <div class="btn-r display-mobile-view">
+        <button class="one_btn btn" :class="{ active: isOneMinuteGame == 0 }" @click="selectTime('30Sec')">
+          Fast Win Game
         </button>
-        <button class="one_btn btn" :class="{ active: !isOneMinuteGame }" @click="selectTime('3min')">
-          3 Minute Game
+        <button class="one_btn btn" :class="{ active: isOneMinuteGame == 1}" @click="selectTime('1min')">
+         WinGo 1 Minute Game
+        </button>
+        <button class="one_btn btn" :class="{ active: isOneMinuteGame == 2 }" @click="selectTime('3min')">
+         WinGo 3 Minute Game
         </button>
       </div>
       <!-- <JoinBets :gameid="gameid" :countDownMinute="countDownMinute" :countDownSecond="countDownSecond"
@@ -33,7 +36,23 @@
           :totaluserresults="totaluserresults" :handleuserresultsPageChange="handleuserresultsPageChange"
           :myrecordmsg="myrecordmsg" @update:iswaitCollapseOpen="updateWaitCollapse"
           @update:isResultCollapseOpen="updateResultCollapse" /> -->
-      <div v-if="isOneMinuteGame">
+      <div v-if="isOneMinuteGame == 0">
+        <fastWinJoinBet :fastgameid="fastgameid" :fastWinCountDownMinute="fastWinCountDownMinute"
+          :fastWinCountDownSecond="fastWinCountDownSecond" :fastWinCountcontinue="fastWinCountcontinue"
+          :fastWinContinueClass="fastWinContinueClass" :fastWinDisabled="fastWinDisabled" :betbutton="betbutton" />
+          
+        <fastWinEmerdRecordList :fastWinResultCategoryList="fastWinResultCategoryList" :fastWinPage="fastWinPage"
+          :fastWinPageRow="fastWinPageRow" :fastWinTotalResult="fastWinTotalResult"
+          :fastWinPageChange="fastWinPageChange" />
+
+        <fastWinOrderList :fastWinUserWaitList="fastWinUserWaitList" :fastWinUserResultList="fastWinUserResultList"
+          :iswaitCollapseOpen="iswaitCollapseOpen" :isResultCollapseOpen="isResultCollapseOpen"
+          :fastWinUserPage="fastWinUserPage" :fastWinUserPageRow="fastWinUserPageRow"
+          :fastWinUserTotal="fastWinUserTotal" :fastWinUserPageChange="fastWinUserPageChange"
+          :fastWinRecordmsg="fastWinRecordmsg" @update:iswaitCollapseOpen="updateWaitCollapse"
+          @update:isResultCollapseOpen="updateResultCollapse" />
+      </div>
+      <div v-else-if="isOneMinuteGame==1">
         <oneMinJoinBet :oneMinGameId="oneMinGameId" :oneMinCountDownMinute="oneMinCountDownMinute"
           :oneMinCountDownSecond="oneMinCountDownSecond" :oneMinCountcontinue="oneMinCountcontinue"
           :oneMinContinueClass="oneMinContinueClass" :oneMinDisabled="oneMinDisabled" :betbutton="betbutton" />
@@ -48,7 +67,7 @@
           @update:iswaitCollapseOpen="updateWaitCollapse" @update:isResultCollapseOpen="updateResultCollapse" />
       </div>
 
-      <div v-else>
+      <div v-else-if="isOneMinuteGame == 2">
         <JoinBets :gameid="gameid" :countDownMinute="countDownMinute" :countDownSecond="countDownSecond"
           :countcontinue="countcontinue" :continueClass="continueClass" :Disabled="Disabled" :betbutton="betbutton" />
         <EmerdRecordList :getResultbyCategoryList="getResultbyCategoryList"
@@ -71,7 +90,7 @@
       <div :class="`modal-header ${batecolor}`">
         <h4 class="modal-title" id="chn">{{ batevalue }}</h4>
       </div>
-      <div v-if="isOneMinuteGame">
+      <div v-if="isOneMinuteGame == 1">
         <Form action="#" @submit="oneMinBateSubmit" method="post" id="bettingForm" autocomplete="off">
           <div class="modal-body" id="loadform">
             <div class="row">
@@ -185,7 +204,7 @@
           </div>
         </Form>
       </div>
-      <div v-else>
+      <div v-else-if="isOneMinuteGame == 2">
         <Form action="#" @submit="onSubmit" method="post" id="bettingForm" autocomplete="off">
           <div class="modal-body" id="loadform">
             <div class="row">
@@ -299,6 +318,120 @@
           </div>
         </Form>
       </div>
+      <div v-else-if="isOneMinuteGame == 0">
+        <Form action="#" @submit="onFastWinSubmit" method="post" id="bettingForm" autocomplete="off">
+          <div class="modal-body" id="loadform">
+            <div class="row">
+              <div class="col-12">
+                <p class="contract-money">Contract Money</p>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <!-- <label v-on:click="levelTab = 5" :class="levelTab === 5
+                  ? 'btn btn-secondary active'
+                  : 'btn btn-secondary'
+                  ">
+                  <input type="radio" name="contract" id="hoursofoperation" value="1" :class="levelTab === 5
+                    ? 'contract checked'
+                    : 'contract'
+                    " v-on:click="moneycount" />
+                  1
+                </label> -->
+                  <label v-on:click="levelTab = 6" :class="levelTab === 6
+                    ? 'btn btn-secondary active'
+                    : 'btn'
+                    ">
+                    <input type="radio" name="contract" id="hoursofoperation" value="5"
+                      :class="levelTab === 6 ? 'contract checked' : 'contract'" v-on:click="moneycount" />
+                    10
+                  </label>
+                  <!-- <label
+                  v-on:click="levelTab = 1"
+                  :class="
+                    levelTab === 1 ? 'btn btn-secondary active' : 'btn btn-secondary'
+                  "
+                >
+                  <input
+                    type="radio"
+                    name="contract"
+                    id="hoursofoperation"
+                    value="10"
+                    :class="levelTab === 1 ? 'contract checked' : 'contract'"
+                    v-on:click="moneycount"
+                  />
+                  10
+                </label> -->
+                  <label v-on:click="levelTab = 2" :class="levelTab === 2
+                    ? 'btn btn-secondary active'
+                    : 'btn  money-counter'
+                    ">
+                    <input type="radio" name="contract" id="hoursofoperation" value="100"
+                      :class="levelTab === 2 ? 'contract checked' : 'contract'" v-on:click="moneycount" />
+                    100
+                  </label>
+                  <label v-on:click="levelTab = 3" :class="levelTab === 3
+                    ? 'btn btn-secondary active'
+                    : 'btn'
+                    ">
+                    <input type="radio" name="contract" id="hoursofoperation" value="1000"
+                      :class="levelTab === 3 ? 'contract checked' : 'contract'" v-on:click="moneycount" />
+                    1000
+                  </label>
+                  <label v-on:click="levelTab = 4" :class="levelTab === 4
+                    ? 'btn btn-secondary active'
+                    : 'btn'
+                    ">
+                    <input type="radio" name="contract" id="hoursofoperation" value="10000"
+                      :class="levelTab === 4 ? 'contract checked' : 'contract'" v-on:click="moneycount" />
+                    10000
+                  </label>
+                </div>
+                <Field type="hidden" v-model="contractmoney" value="10" :rules="validatename" name="contractmoney"
+                  id="contractmoney" onKeyPress="" />
+                <p class="contract-money">Number</p>
+                <div class="def-number-input number-input safari_only">
+                  <button type="button" v-on:click="stepDown" class="minus"></button>
+                  <input class="quantity" min="1" name="amount" id="amount" :value="amount" type="number" />
+                  <button type="button" v-on:click="stepUp" class="plus"></button>
+                </div>
+                <Field type="hidden" :value="type1" v-model="type1" name="type" id="type" class="form-control" />
+                <Field type="hidden" :value="value1" v-model="value1" name="value" id="value" class="form-control" />
+                <Field type="hidden" name="counter" id="counter" class="form-control" />
+                <Field type="hidden" :value="fastgameid" v-model="fastgameid" name="inputgameid" id="inputgameid"
+                  class="form-control" />
+                <div class="contract-money">
+                  Total contract money is
+                  <span id="showamount" style="font-size: 14px;">{{ totalamount }}</span>
+                </div>
+                <Field type="hidden" :value="totalamount" v-model="totalamount" name="finalamount" id="finalamount"
+                  class="form-control" />
+                <!-- <div class="custom-control custom-checkbox">
+                    <input type="checkbox" checked class="custom-control-input" id="presalerule" name="presalerule" />
+                    <label class="custom-control-label text-muted" for="presalerule"
+                      v-on:click="isContractModalVisible = false">I agree <a data-toggle="modal" data-backdrop="static"
+                        v-on:click="isNoticeModalVisible = true">PRESALE RULE</a></label>
+                  </div> -->
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" checked class="custom-control-input" id="presalerule" name="presalerule" />
+                  <label class="custom-control-label text-muted" for="presalerule">I agree
+                    <a data-toggle="modal" data-backdrop="static" v-on:click="
+                      (isNoticeModalVisible = true),
+                      (isContractModalVisible = false)
+                      ">PRESALE RULE</a>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Field type="hidden" value="parity" name="tab" id="tab" class="form-control" />
+          <div class="modal-footer">
+            <a type="button" class="pull-left btn btn-sm closebtn"
+              v-on:click="(isContractModalVisible = false), hideModal()">CANCEL</a>
+            <button type="submit" class="pull-left btn btn-sm btn-white confirm-text" v-on:click="conformbat = true"
+              :class="conformbat ? 'Disabled' : ''">
+              CONFIRM
+            </button>
+          </div>
+        </Form>
+      </div>
     </Modal>
   </div>
 
@@ -352,7 +485,9 @@ import Loader from "../../components/UserLoader.vue";
 import oneMinJoinBet from "../GameWin/oneMinGame/JoinBets.vue";
 import oneMinEmerdRecordList from "../GameWin/oneMinGame/EmerdRecordList.vue";
 import oneMinOrderList from "../GameWin/oneMinGame/myOderDetails.vue";
-
+import fastWinJoinBet from "../GameWin/fastWinGame/JoinBets.vue";
+import fastWinEmerdRecordList from "../GameWin/fastWinGame/EmerdRecordList.vue";
+import fastWinOrderList from "../GameWin/fastWinGame/myOderDetails.vue";
 export default {
   components: {
     Footer,
@@ -368,7 +503,10 @@ export default {
     PrivacyPolicyModel,
     oneMinJoinBet,
     oneMinEmerdRecordList,
-    oneMinOrderList
+    fastWinEmerdRecordList,
+    oneMinOrderList,
+    fastWinJoinBet,
+    fastWinOrderList
   },
 
   setup() {
@@ -379,6 +517,7 @@ export default {
     const mineDashbordData = ref({});
     const gameid = ref("");
     const oneMinGameId = ref("");
+    const fastgameid = ref("");
     const userresult = ref();
     const batecolor = ref("paymentheader");
     const batevalue = ref("");
@@ -397,39 +536,54 @@ export default {
     const totaluserresults = ref(0);
     const userresultList = ref([]);
     const oneMinUserResultList = ref([]);
+    const fastWinUserResultList = ref([]);
     const oneMinUserPage = ref(1);
+    const fastWinUserPage = ref(1);
     const oneMinUserPageRow = ref(10);
+    const fastWinUserPageRow = ref(10);
     const oneMinUserTotal = ref(0);
+    const fastWinUserTotal = ref(0);
     const oneMinUserResultPageOpen = ref(false);
     const getResultbyCategoryPage = ref(1);
     const getResultbyCategoryPageRow = ref(10);
     const oneMinPage = ref(1);
+    const fastWinPage = ref(1);
+    const fastWinPageRow = ref(10);
     const oneMinPageRow = ref(10);
     const oneMinTotalResult = ref(0);
+    const fastWinTotalResult = ref(0);
     const oneMinOpenPage = ref(false);
     const getResultbyCategoryPageRowOpen = ref(false);
     const totalgetResultbyCategory = ref(0);
     const getResultbyCategoryList = ref("");
     const oneMinResultCategoryList = ref("");
+    const fastWinResultCategoryList = ref("");
     const userwaitlist = ref([]);
     const oneMinUserWaitList = ref([]);
+    const fastWinUserWaitList = ref([]);
     const Disabled = ref("");
     const countDownMinute = ref(0);
     const countDownSecond = ref(0);
     const countcontinue = ref(false);
     const oneMinDisabled = ref("");
+    const fastWinDisabled = ref("");
     const oneMinCountDownMinute = ref(0);
+    const fastWinCountDownMinute = ref(0);
     const oneMinCountDownSecond = ref(0);
+    const fastWinCountDownSecond = ref(0);
     const oneMinCountcontinue = ref(false);
+    const fastWinCountcontinue = ref(false);
     const oneMinContinueClass = ref("");
+    const fastWinContinueClass = ref("");
     const myrecordmsg = ref(false);
     const oneMinRecordmsg = ref(false);
+    const fastWinRecordmsg = ref(false);
     const continueClass = ref("");
     let loader = ref(false);
     let conformbat = ref(false);
     let userresultsTotalpage = ref(0);
     const blueline = ref("none");
-    const isOneMinuteGame = ref(true);
+    const isOneMinuteGame = ref(0);
     let socket = io(process.env.VUE_APP_SOCAT_URL, { transports: ['websocket'] });
     socket.connect();
 
@@ -488,6 +642,34 @@ export default {
               oneMinRecordmsg.value = true;
             } else {
               oneMinRecordmsg.value = false;
+            }
+          } else {
+            setErrorMessage(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.log(error.data.error);
+        });
+    };
+    const getFastWinUserResult = async () => {
+      await axios
+        .post("/fast/win/user-result", {
+          page: fastWinUserPage.value,
+          pagerow: fastWinUserPageRow.value,
+          category: "parity",
+          periodid: fastgameid.value,
+        })
+        .then((response) => {
+          if (response.data.success) {
+            fastWinUserResultList.value = response.data.data;
+            fastWinUserTotal.value = response.data.total;
+            userresultsTotalpage.value = response.data.totalPages;
+            fastWinUserPage.value = response.data.currentpage;
+            fastWinUserWaitList.value = response.data.waitlist;
+            if (fastWinUserWaitList.value.length === 0 || !fastWinUserResultList.value) {
+              fastWinRecordmsg.value = true;
+            } else {
+              fastWinRecordmsg.value = false;
             }
           } else {
             setErrorMessage(response.data.message);
@@ -584,10 +766,32 @@ export default {
           setTimeout(() => {
             $("#blrow").css("display", "none");
           }, 2000);
-
           oneMinResultCategoryList.value = response.data.data;
           oneMinTotalResult.value = response.data.total;
-          console.log("response.total", response.data.total)
+        } else {
+          setErrorMessage(response.data.message);
+        }
+      } catch (error) {
+        console.error("API error:", error);
+        setErrorMessage("Server error occurred.");
+      }
+    };
+    const fastWinResultbyCategory = async () => {
+      try {
+        const response = await axios.get("/fast/win/result", {
+          params: {
+            page: fastWinPage.value,
+            pageRow: fastWinPageRow.value,
+            category: "parity",
+          },
+        });
+        if (response) {
+          $("#blrow").css("display", "contents");
+          setTimeout(() => {
+            $("#blrow").css("display", "none");
+          }, 2000);
+          fastWinResultCategoryList.value = response.data.data;
+          fastWinTotalResult.value = response.data.totalResults;
         } else {
           setErrorMessage(response.data.message);
         }
@@ -603,6 +807,14 @@ export default {
         getOneMinResultbyCategory();
       }
     };
+    const fastWinPageRowChange = (row) => {
+      if (row) {
+        fastWinPageRow.value = row;
+        oneMinOpenPage.value = false;
+        fastWinResultbyCategory();
+      }
+    };
+    
 
     const oneMinPageChange = (page) => {
       var page1 =
@@ -625,6 +837,28 @@ export default {
         setErrorMessage("First Page Now!");
       }
     };
+    const fastWinPageChange = (page) => {
+      var page1 =
+        fastWinTotalResult.value / fastWinPageRow.value;
+      // const myArray = page1.split(".");
+      var pagepoint = page1 - Math.floor(page1);
+      var lastpage = Math.floor(page1);
+      if (0 < pagepoint) {
+        lastpage = lastpage + 1;
+      }
+
+      if (page > 0) {
+        if (lastpage >= page) {
+          fastWinPage.value = page;
+          fastWinResultbyCategory();
+        } else {
+          setErrorMessage("Last Page Now!");
+        }
+      } else {
+        setErrorMessage("First Page Now!");
+      }
+    };
+
 
     const setErrorMessage = (value) => {
       errorMessage.value = value;
@@ -671,6 +905,13 @@ export default {
         getOneMinUserResult();
       }
     };
+    const fastWinUserPageRowChange = (row) => {
+      if (row) {
+        fastWinUserPageRow.value = row;
+        oneMinUserResultPageOpen.value = false;
+        getFastWinUserResult();
+      }
+    };
 
     const oneMinUserPageChange = (page) => {
       var page1 = oneMinUserTotal.value / oneMinUserPageRow.value;
@@ -684,6 +925,25 @@ export default {
         if (lastpage >= page) {
           oneMinUserPage.value = page;
           getOneMinUserResult();
+        } else {
+          setErrorMessage("Last Page Now!");
+        }
+      } else {
+        setErrorMessage("First Page Now!");
+      }
+    };
+    const fastWinUserPageChange = (page) => {
+      var page1 = fastWinUserTotal.value / fastWinUserPageRow.value;
+      var pagepoint = page1 - Math.floor(page1);
+      var lastpage = Math.floor(page1);
+      if (0 < pagepoint) {
+        lastpage = lastpage + 1;
+      }
+
+      if (page > 0) {
+        if (lastpage >= page) {
+          fastWinUserPage.value = page;
+          getFastWinUserResult();
         } else {
           setErrorMessage("Last Page Now!");
         }
@@ -765,6 +1025,24 @@ export default {
           console.log(error);
         });
     };
+    const fastWinPeriodId = async () => {
+      await axios
+        .get("/fast/win/period-id", {})
+        .then((response) => {
+          if (response.data.success === true) {
+            loader.value = true;
+            setTimeout(function () {
+              loader.value = false;
+            }, 2000);
+            fastgameid.value = response.data.data.gameid;
+          } else {
+            // alert(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
 
     const stepUp = async () => {
       amount.value = amount.value + 1;
@@ -821,6 +1099,65 @@ export default {
               // userwaitlistfun();
             }, 2000);
             getuserresults();
+          }
+          // socket.emit("amount", response.data.data.value);
+          // socket.emit("userID", response.data.data.userid);
+        })
+        .catch((error) => {
+          console.log(error.data.error);
+        });
+      socket.on("value", (data) => {
+        socket.emit("values", data);
+        console.log("on data", data || "undefined");
+      });
+      socket.on("amount", (data) => {
+        socket.emit("amounts", data);
+        console.log("on data", data || "undefined");
+      });
+      socket.on("userID", (data) => {
+        socket.emit("user", data);
+      });
+    };
+    const onFastWinSubmit = async (values) => {
+      await axios
+        .post("/fast/win/bate", {
+          type: values.type,
+          value: values.value,
+          counter: "32",
+          inputgameid: values.inputgameid,
+          finalamount: values.finalamount,
+          tab: values.tab,
+          presalerule: "on",
+        })
+        .then((response) => {
+          if (response.data.success) {
+            isContractModalVisible.value = false;
+            conformbat.value = false;
+            getMineDashbordData();
+            hideModal();
+            setErrorMessage(response.data.message);
+            socket.emit("fastWinBate", response.data.data);
+
+            $("#blrow").css("display", "contents");
+
+            setTimeout(() => {
+              $("#blrow").css("display", "none");
+              // userwaitlistfun();
+            }, 2000);
+            getFastWinUserResult();
+            //   window.location.reload(true);
+          } else {
+            setErrorMessage(response.data.message);
+            isContractModalVisible.value = false;
+            conformbat.value = false;
+            hideModal();
+            $("#blrow").css("display", "contents");
+
+            setTimeout(() => {
+              $("#blrow").css("display", "none");
+              // userwaitlistfun();
+            }, 2000);
+            getFastWinUserResult();
           }
           // socket.emit("amount", response.data.data.value);
           // socket.emit("userID", response.data.data.userid);
@@ -1021,6 +1358,53 @@ export default {
       oneMinShowTimer();
     }, 1e3);
 
+    const fastWinShowTimer = () => {
+      var countDownDate = Date.parse(new Date()) / 1e3;
+      var distance = 30 - (countDownDate % 30);
+      var i = distance / 60,
+        n = distance % 60;
+      fastWinCountDownMinute.value = Math.floor(i);
+      fastWinCountDownSecond.value = ("0" + Math.floor(n)).slice(-2);
+
+      // if (distance <= 180 && distance > 174) {
+      if (distance === 30) {
+        fastWinCountcontinue.value = true;
+        fastWinContinueClass.value = "Disabled";
+      }
+
+      if (distance === 28) {
+        fastWinContinueClass.value = "continue";
+      }
+
+      if (distance === 27) {
+        fastWinCountcontinue.value = false;
+        fastWinContinueClass.value = "";
+      }
+
+      if (distance <= 3) {
+        fastWinDisabled.value = "Disabled";
+      } else {
+        fastWinDisabled.value = "";
+      }
+      // if (distance == 176) {
+      if (distance == 28) {
+        // winnerResultfun();
+        if (!localStorage.getItem("authToken")) {
+          router.push({ path: "/login" });
+        } else {
+          fastWinResultbyCategory();
+          getMineDashbordData();
+          setTimeout(() => {
+            getFastWinUserResult();
+          }, 1000);
+          fastWinPeriodId();
+        }
+      }
+    };
+    setInterval(function () {
+      fastWinShowTimer();
+    }, 1e3);
+
     if (!localStorage.getItem("authToken")) {
       router.push({ path: "/login" });
     } else {
@@ -1029,8 +1413,9 @@ export default {
         // userwaitlistfun();
         getuserresults();
         getOneMinUserResult();
+        getFastWinUserResult();
       }, 2000);
-      oneMinPeriodId();
+      fastWinPeriodId();
     }
     const showModal = () => {
       document.body.classList.add("modal-open");
@@ -1046,29 +1431,39 @@ export default {
       isResultCollapseOpen.value = newId;
     };
     const selectTime = (value) => {
-      if (value === "1min") {
-        isOneMinuteGame.value = true;
+     if (value === "30Sec"){
+        isOneMinuteGame.value = 0;
+        fastWinPage.value = 1;
+       fastWinResultbyCategory();
+       getFastWinUserResult();
+     }
+     else if (value === "1min") {
+        isOneMinuteGame.value = 1;
         // Reset pagination for 1-min game
         oneMinPage.value = 1;
         getOneMinResultbyCategory();
         getOneMinUserResult();
       } else if (value === "3min") {
-        isOneMinuteGame.value = false;
+        isOneMinuteGame.value = 2;
         // Reset pagination for 3-min game
         getResultbyCategoryPage.value = 1;
         getResultbyCategory();
         getuserresults();
       }
       // Refresh game ID based on selected time
-      if (isOneMinuteGame.value) {
-        oneMinPeriodId();
-      } else {
-        gameidfun();
+      if (isOneMinuteGame.value === 0) {
+        fastWinPeriodId();
       }
+      else if (isOneMinuteGame.value === 1) {
+        oneMinPeriodId();
+      }else if(isOneMinuteGame.value === 2){
+        gameidfun();
+      } 
     };
     onMounted(() => {
       getMineDashbordData();
       getOneMinResultbyCategory();
+      fastWinResultbyCategory();
     });
 
     // Add CSS for active button state
@@ -1087,8 +1482,10 @@ export default {
       mineDashbordData,
       gameidfun,
       oneMinPeriodId,
+      fastWinPeriodId,
       gameid,
       oneMinGameId,
+      fastgameid,
       getMineDashbordData,
       pagereload,
       router,
@@ -1106,12 +1503,14 @@ export default {
       value1,
       type1,
       onSubmit,
+      onFastWinSubmit,
       oneMinBateSubmit,
       isResultCollapseOpen,
       iswaitCollapseOpen,
       userresult,
       userresultList,
       oneMinUserResultList,
+      fastWinUserResultList,
       userresultsPage,
       userresultsPageRow,
       getuserresults,
@@ -1123,6 +1522,7 @@ export default {
       getResultbyCategory,
       getResultbyCategoryList,
       oneMinResultCategoryList,
+      fastWinResultCategoryList,
       getResultbyCategoryPage,
       getResultbyCategoryPageRow,
       handlegetResultbyCategoryPageChange,
@@ -1131,40 +1531,58 @@ export default {
       totalgetResultbyCategory,
       userwaitlist,
       oneMinUserWaitList,
+      fastWinUserWaitList,
       Disabled,
       oneMinDisabled,
+      fastWinDisabled,
       countDownMinute,
       oneMinCountDownMinute,
+      fastWinCountDownMinute,
       countDownSecond,
       oneMinCountDownSecond,
+      fastWinCountDownSecond,
       countcontinue,
       oneMinCountcontinue,
+      fastWinCountcontinue,
       loader,
       continueClass,
       oneMinContinueClass,
+      fastWinContinueClass,
       setErrorMessage,
       isErrorShow,
       errorMessage,
       blueline,
       myrecordmsg,
       oneMinRecordmsg,
+      fastWinRecordmsg,
       conformbat,
       updateWaitCollapse,
       updateResultCollapse,
       selectTime,
       getOneMinResultbyCategory,
+      fastWinResultbyCategory,
       oneMinOpenPage,
       oneMinPageRowChange,
+      fastWinPageRowChange,
       oneMinPageChange,
+      fastWinPageChange,
       oneMinUserPageRowChange,
+      fastWinUserPageRowChange,
       oneMinUserPageChange,
+      fastWinUserPageChange,
       isOneMinuteGame,
       oneMinTotalResult,
+      fastWinTotalResult,
       oneMinPage,
+      fastWinPage,
+      fastWinPageRow,
       oneMinPageRow,
       oneMinUserPageRow,
       oneMinUserPage,
-      oneMinUserTotal
+      oneMinUserTotal,
+      fastWinUserTotal,
+      fastWinUserPage,
+      fastWinUserPageRow
     };
   },
 };
@@ -1176,3 +1594,16 @@ export default {
 @import "../assets/css/pagination.css";
 @import "../assets/css/chunk-vendors.css";
 </style> -->
+
+
+<style scoped>
+  @media only screen and (max-width: 425px) {
+     .display-mobile-view{
+        display: flex;
+     }
+     .display-mobile-view .one_btn {
+         height: 64px !important;
+     }
+    
+  }
+</style>

@@ -33,7 +33,9 @@ import adminColorCode from "@/pages/admin/AdminColorCode.vue";
 import oneMinutePeriod from "../pages/admin/oneMinuteGame/periodHistorty.vue";
 import userWisePeriodHistory from "@/pages/admin/oneMinuteGame/userWisePeriodHistory.vue";
 import oneMinResultSet from "../pages/admin/oneMinuteGame/SetResultGame.vue";
-
+import fastWinResultSet from "../pages/admin/fastWinGame/SetResultGame.vue";
+import fastWinPeriodHistory from "../pages/admin/fastWinGame/periodHistorty.vue";
+import userWiseFastWinPeriodHistory from "@/pages/admin/fastWinGame/userWisePeriodHistory.vue";
 export const routes = [
   // {
   //   path: "/",
@@ -195,5 +197,20 @@ export const routes = [
     path:"/dgklhtobgoijbrtoidfbgfgerjot/oneMinResultSet",
     name:"oneMinResultSet",
     component: oneMinResultSet,
+  },
+  {
+    path: "/dgklhtobgoijbrtoidfbgfgerjot/fast/win/result/set",
+    name: "fastWinResultSet",
+    component: fastWinResultSet,
+  },
+  {
+    path: "/dgklhtobgoijbrtoidfbgfgerjot/fast/win/period/history/",
+    name: "fastWinPeriodHistory",
+    component: fastWinPeriodHistory,
+  },
+  {
+    path: "/dgklhtobgoijbrtoidfbgfgerjot/fast/win/user/period/history/:periodid",
+    name: "userWiseFastWinPeriodHistory",
+    component: userWiseFastWinPeriodHistory,
   }
 ];

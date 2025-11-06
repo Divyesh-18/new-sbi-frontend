@@ -7,7 +7,7 @@
       <a href="#" v-on:click="router.go(-1)" class="icon goBack">
         <img :src="require('../../../assets/images/left.png')" />
       </a>
-      <div class="pageTitle">One Minute Orders</div>
+      <div class="pageTitle">WinGo One Minute Orders</div>
     </div>
   </div>
   <div class="order-wrapper">
@@ -205,7 +205,7 @@
                           <span style="color: rgb(76, 175, 80)" v-if="item.result_color === 'Green'">{{
                             item.result_color }}</span>
                           <span style="color: #ff0000" v-else-if="item.result_color === 'Red'">{{ item.result_color
-                          }}</span>
+                            }}</span>
                           <span style="color: rgb(156, 39, 176)" v-else-if="item.result_color === 'Violet'">{{
                             item.result_color }}</span>
                         </div>
@@ -289,7 +289,7 @@
             <ul class="page_box">
               <li class="page">
                 <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-                }} to {{ userresultsPage * userresultsPageRow }}
+                  }} to {{ userresultsPage * userresultsPageRow }}
                 </span>
               </li>
               <li class="page_btn">
@@ -303,109 +303,108 @@
       </div>
       <div v-if="levelTab === 2" class="tab-pane fade active show" id="level2" role="tabpanel">
         <div class="table-responsive">
-              <table class="table table-borderless" id="myrecordparityt">
-                <tbody>
-                  <tr v-on:click="
+          <table class="table table-borderless" id="myrecordparityt">
+            <tbody>
+              <tr v-on:click="
                     isResultCollapseOpen =
                     isResultCollapseOpen === item.id ? '' : item.id
                     " v-for="item in waitlist" :key="item.id" class="clickable user-order-table">
-                    <td class="myRecordTd" style="border: none">
-                      <div class="van-cell van-cell--clickable van-collapse-item__title"
-                        style="background-color: #ffff !important;">
-                        <span>{{ item.periodid }} &nbsp; &nbsp;
-                          <span class="text-warning"> wait </span>
-                        </span>
-                        <div :class="isResultCollapseOpen === item.id ? 'testing' : ''
+                <td class="myRecordTd" style="border: none">
+                  <div class="van-cell van-cell--clickable van-collapse-item__title"
+                    style="background-color: #ffff !important;">
+                    <span>{{ item.periodid }} &nbsp; &nbsp;
+                      <span class="text-warning"> wait </span>
+                    </span>
+                    <div :class="isResultCollapseOpen === item.id ? 'testing' : ''
                           ">
-                          <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
-                        </div>
+                      <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
+                    </div>
+                  </div>
+
+                  <div id="t" class="detail mt-1 mb-1 p-1" v-show="isResultCollapseOpen === item.id ? true : false"
+                    style="padding: 0px 30px">
+                    <p style="color: #2d9688; text-align: start; font-weight: bolder;">Period Detail</p>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Period</div>
+                      <div class="point2 addclass">{{ item.periodid }}</div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Contract Money</div>
+                      <div class="point2 addclass">
+                        {{ item.amount.toFixed(2) }}
                       </div>
+                    </div>
 
-                      <div id="t" class="detail mt-1 mb-1 p-1" v-show="isResultCollapseOpen === item.id ? true : false"
-                        style="padding: 0px 30px">
-                        <p style="color: #2d9688; text-align: start; font-weight: bolder;">Period Detail</p>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Period</div>
-                          <div class="point2 addclass">{{ item.periodid }}</div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Contract Money</div>
-                          <div class="point2 addclass">
-                            {{ item.amount.toFixed(2) }}
-                          </div>
-                        </div>
-
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Delivery</div>
-                          <div class="point2 addclass orange" style="color: #f39839">
-                            {{ ((item.amount * 95) / 100).toFixed(2) }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Fee</div>
-                          <div class="point2 addclass">
-                            {{ ((item.amount * 5) / 100).toFixed(2) }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Open Price</div>
-                          <div class="point2 addclass">wait</div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Result</div>
-                          <div class="point2 addclass" style="color: #2197f3">
-                            Wait
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Select</div>
-                          <div class="point2 addclass" style="color: #4caf50 !important" v-if="item.value === 'Green'">
-                            {{ item.value }}
-                          </div>
-                          <div class="point2 addclass" style="color: #ff0000 !important"
-                            v-else-if="item.value === 'Red'">
-                            {{ item.value }}
-                          </div>
-                          <div class="point2 addclass" style="color: rgb(156, 39, 176) !important"
-                            v-else-if="item.value === 'Violet'">
-                            {{ item.value }}
-                          </div>
-                          <div class="point2 addclass" v-else>
-                            {{ item.value }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Status</div>
-                          <div class="point2 addclass" style="color: #f39839 !important; font-size: 14px">
-                            Wait
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Amount</div>
-                          <div class="point2 addclass" style="color: #4caf50 !important; font-size: 14px"
-                            v-if="item.status === 'success'"></div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Create Time</div>
-                          <div class="point2 addclass">
-                            {{ formatDate(item.created_at) }}
-                          </div>
-                        </div>
-                        <!-- <div class="mt-1" style="display: flex">
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Delivery</div>
+                      <div class="point2 addclass orange" style="color: #f39839">
+                        {{ ((item.amount * 95) / 100).toFixed(2) }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Fee</div>
+                      <div class="point2 addclass">
+                        {{ ((item.amount * 5) / 100).toFixed(2) }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Open Price</div>
+                      <div class="point2 addclass">wait</div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Result</div>
+                      <div class="point2 addclass" style="color: #2197f3">
+                        Wait
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Select</div>
+                      <div class="point2 addclass" style="color: #4caf50 !important" v-if="item.value === 'Green'">
+                        {{ item.value }}
+                      </div>
+                      <div class="point2 addclass" style="color: #ff0000 !important" v-else-if="item.value === 'Red'">
+                        {{ item.value }}
+                      </div>
+                      <div class="point2 addclass" style="color: rgb(156, 39, 176) !important"
+                        v-else-if="item.value === 'Violet'">
+                        {{ item.value }}
+                      </div>
+                      <div class="point2 addclass" v-else>
+                        {{ item.value }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Status</div>
+                      <div class="point2 addclass" style="color: #f39839 !important; font-size: 14px">
+                        Wait
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Amount</div>
+                      <div class="point2 addclass" style="color: #4caf50 !important; font-size: 14px"
+                        v-if="item.status === 'success'"></div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Create Time</div>
+                      <div class="point2 addclass">
+                        {{ formatDate(item.created_at) }}
+                      </div>
+                    </div>
+                    <!-- <div class="mt-1" style="display: flex">
       <div class="point2 addclass">Type</div>
       <div class="point2 addclass">{{ item.type }}</div>
     </div> -->
-                        <div class="mt-1 pre-pay-btn" style="display: flex">
-                          <div class="point2 addclass"></div>
-                          <!-- <router-link to="/product?goodsId=25"> -->
-                          <button class="btn-primary">Pre Pay</button>
-                          <!-- </router-link> -->
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    <div class="mt-1 pre-pay-btn" style="display: flex">
+                      <div class="point2 addclass"></div>
+                      <!-- <router-link to="/product?goodsId=25"> -->
+                      <button class="btn-primary">Pre Pay</button>
+                      <!-- </router-link> -->
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <p v-show="!userresultList.wait" style="
             font-size: 12px;
@@ -419,7 +418,7 @@
           <ul class="page_box">
             <li class="page">
               <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-              }} to {{ userresultsPage * userresultsPageRow }}
+                }} to {{ userresultsPage * userresultsPageRow }}
               </span>
             </li>
             <li class="page_btn">
@@ -431,137 +430,136 @@
       </div>
       <div v-if="levelTab === 3" class="tab-pane fade active show" id="level3" role="tabpanel">
         <div class="table-responsive">
-              <table class="table table-borderless" id="myrecordparityt">
-                <tbody>
-                  <tr v-on:click="
+          <table class="table table-borderless" id="myrecordparityt">
+            <tbody>
+              <tr v-on:click="
                     isResultCollapseOpen =
                     isResultCollapseOpen === item.id ? '' : item.id
                     " v-for="item in userresultList" :key="item._id" class="clickable user-order-table"
-                    v-show="item.status === 'Fail'">
-                    <td class="myRecordTd" style="border: none">
-                      <div class="van-cell van-cell--clickable van-collapse-item__title"
-                        style="background-color: #ffff !important;">
-                        <span>{{ item.period }} &nbsp; &nbsp;
-                          <span :class="'text-success'" v-if="item.status === 'success'">
-                            {{ item.status === "success" ? "success" : "Fail" }}
-                            &nbsp;&nbsp;&nbsp; +{{ item.delivery }}
-                          </span>
+                v-show="item.status === 'Fail'">
+                <td class="myRecordTd" style="border: none">
+                  <div class="van-cell van-cell--clickable van-collapse-item__title"
+                    style="background-color: #ffff !important;">
+                    <span>{{ item.period }} &nbsp; &nbsp;
+                      <span :class="'text-success'" v-if="item.status === 'success'">
+                        {{ item.status === "success" ? "success" : "Fail" }}
+                        &nbsp;&nbsp;&nbsp; +{{ item.delivery }}
+                      </span>
 
-                          <span :class="'text-danger'" v-else>
-                            {{ item.status === "success" ? "success" : "Fail" }}
-                            &nbsp;&nbsp;&nbsp; -{{ item.delivery }}
-                          </span>
-                        </span>
-                        <div :class="isResultCollapseOpen === item.id ? 'testing' : ''
+                      <span :class="'text-danger'" v-else>
+                        {{ item.status === "success" ? "success" : "Fail" }}
+                        &nbsp;&nbsp;&nbsp; -{{ item.delivery }}
+                      </span>
+                    </span>
+                    <div :class="isResultCollapseOpen === item.id ? 'testing' : ''
                           ">
-                          <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
-                        </div>
+                      <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
+                    </div>
+                  </div>
+                  <div id="t" class="myRecordDetail detail mt-1"
+                    v-show="isResultCollapseOpen === item.id ? true : false">
+                    <p style="color: #2d9688; font-size: 14px; text-align: start; font-weight: bolder;">Period
+                      Detail</p>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Period</div>
+                      <div class="point2 addclass">{{ item.period }}</div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Contract Money</div>
+                      <div class="point2 addclass">
+                        {{ item.contract_money }}
                       </div>
-                      <div id="t" class="myRecordDetail detail mt-1"
-                        v-show="isResultCollapseOpen === item.id ? true : false">
-                        <p style="color: #2d9688; font-size: 14px; text-align: start; font-weight: bolder;">Period
-                          Detail</p>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Period</div>
-                          <div class="point2 addclass">{{ item.period }}</div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Contract Money</div>
-                          <div class="point2 addclass">
-                            {{ item.contract_money }}
-                          </div>
-                        </div>
-                        <!-- <div class="mt-1" style="display: flex">
+                    </div>
+                    <!-- <div class="mt-1" style="display: flex">
                         <div class="point2 addclass">Contract Count</div>
                         <div class="point2 addclass">{{ item.contract_count }}</div>
                       </div> -->
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Delivery</div>
-                          <div class="point2 addclass orange" style="color: #f39839">
-                            {{ item.delivery }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Fee</div>
-                          <div class="point2 addclass">{{ item.fee }}</div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Open Price</div>
-                          <div class="point2 addclass">
-                            {{ item.open_price }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Result</div>
-                          <div class="point2 addclass" style="color: #2197f3">
-                            {{ item.result_number }}
-                            <span style="color: rgb(76, 175, 80)" v-if="item.result_color === 'Green'">{{
-                              item.result_color }}</span>
-                            <span style="color: #ff0000" v-else-if="item.result_color === 'Red'">{{ item.result_color
-                            }}</span>
-                            <span style="color: rgb(156, 39, 176)" v-else-if="item.result_color === 'Violet'">{{
-                              item.result_color }}</span>
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Select</div>
-                          <!-- <div class="point2 addclass" style="color:#2197f3">{{ item.select }}</div> -->
-                          <div class="point2 addclass" style="color: #4caf50 !important" v-if="item.select === 'Green'">
-                            {{ item.select }}
-                          </div>
-                          <div class="point2 addclass" style="color: #ff0000 !important"
-                            v-else-if="item.select === 'Red'">
-                            {{ item.select }}
-                          </div>
-                          <div class="point2 addclass" style="color: rgb(156, 39, 176) !important"
-                            v-else-if="item.select === 'Violet'">
-                            {{ item.select }}
-                          </div>
-                          <div class="point2 addclass" style="color: #2197f3" v-else>
-                            {{ item.select }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Status</div>
-                          <div class="point2 addclass" style="color: #4caf50 !important; font-size: 14px"
-                            v-if="item.status === 'success'">
-                            {{ item.status }}
-                          </div>
-                          <div class="point2 addclass" style="color: #ff0000 !important; font-size: 14px" v-else>
-                            {{ item.status }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Amount</div>
-                          <div class="point2 addclass" style="color: #4caf50 !important; font-size: 14px"
-                            v-if="item.status === 'success'">
-                            +{{ item.amount }}
-                          </div>
-                          <div class="point2 addclass" style="color: #ff0000 !important; font-size: 14px" v-else>
-                            -{{ item.amount }}
-                          </div>
-                        </div>
-                        <div class="mt-1" style="display: flex">
-                          <div class="point2 addclass">Create Time</div>
-                          <div class="point2 addclass">
-                            {{ formatDate(item.created_at) }}
-                          </div>
-                        </div>
-                        <!-- <div class="mt-1" style="display: flex">
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Delivery</div>
+                      <div class="point2 addclass orange" style="color: #f39839">
+                        {{ item.delivery }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Fee</div>
+                      <div class="point2 addclass">{{ item.fee }}</div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Open Price</div>
+                      <div class="point2 addclass">
+                        {{ item.open_price }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Result</div>
+                      <div class="point2 addclass" style="color: #2197f3">
+                        {{ item.result_number }}
+                        <span style="color: rgb(76, 175, 80)" v-if="item.result_color === 'Green'">{{
+                          item.result_color }}</span>
+                        <span style="color: #ff0000" v-else-if="item.result_color === 'Red'">{{ item.result_color
+                          }}</span>
+                        <span style="color: rgb(156, 39, 176)" v-else-if="item.result_color === 'Violet'">{{
+                          item.result_color }}</span>
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Select</div>
+                      <!-- <div class="point2 addclass" style="color:#2197f3">{{ item.select }}</div> -->
+                      <div class="point2 addclass" style="color: #4caf50 !important" v-if="item.select === 'Green'">
+                        {{ item.select }}
+                      </div>
+                      <div class="point2 addclass" style="color: #ff0000 !important" v-else-if="item.select === 'Red'">
+                        {{ item.select }}
+                      </div>
+                      <div class="point2 addclass" style="color: rgb(156, 39, 176) !important"
+                        v-else-if="item.select === 'Violet'">
+                        {{ item.select }}
+                      </div>
+                      <div class="point2 addclass" style="color: #2197f3" v-else>
+                        {{ item.select }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Status</div>
+                      <div class="point2 addclass" style="color: #4caf50 !important; font-size: 14px"
+                        v-if="item.status === 'success'">
+                        {{ item.status }}
+                      </div>
+                      <div class="point2 addclass" style="color: #ff0000 !important; font-size: 14px" v-else>
+                        {{ item.status }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Amount</div>
+                      <div class="point2 addclass" style="color: #4caf50 !important; font-size: 14px"
+                        v-if="item.status === 'success'">
+                        +{{ item.amount }}
+                      </div>
+                      <div class="point2 addclass" style="color: #ff0000 !important; font-size: 14px" v-else>
+                        -{{ item.amount }}
+                      </div>
+                    </div>
+                    <div class="mt-1" style="display: flex">
+                      <div class="point2 addclass">Create Time</div>
+                      <div class="point2 addclass">
+                        {{ formatDate(item.created_at) }}
+                      </div>
+                    </div>
+                    <!-- <div class="mt-1" style="display: flex">
                         <div class="point2 addclass">Type</div>
                         <div class="point2 addclass">{{ item.type }}</div>
                       </div> -->
-                        <div class="mt-1 pre-pay-btn" style="display: flex">
-                          <div class="point2 addclass"></div>
-                          <!-- <router-link to="/product?goodsId=25"> -->
-                          <button class="btn-primary">Pre Pay</button>
-                          <!-- </router-link> -->
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    <div class="mt-1 pre-pay-btn" style="display: flex">
+                      <div class="point2 addclass"></div>
+                      <!-- <router-link to="/product?goodsId=25"> -->
+                      <button class="btn-primary">Pre Pay</button>
+                      <!-- </router-link> -->
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <p v-show="userresultList.loss" style="
               font-size: 12px;
               text-align: center;
@@ -583,7 +581,7 @@
           <ul class="page_box">
             <li class="page">
               <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-              }} to {{ userresultsPage * userresultsPageRow }}
+                }} to {{ userresultsPage * userresultsPageRow }}
               </span>
             </li>
             <li class="page_btn">
@@ -661,7 +659,7 @@
                           <span style="color: rgb(76, 175, 80)" v-if="item.result_color === 'Green'">{{
                             item.result_color }}</span>
                           <span style="color: #ff0000" v-else-if="item.result_color === 'Red'">{{ item.result_color
-                          }}</span>
+                            }}</span>
                           <span style="color: rgb(156, 39, 176)" v-else-if="item.result_color === 'Violet'">{{
                             item.result_color }}</span>
                         </div>
@@ -744,7 +742,7 @@
             <ul class="page_box">
               <li class="page">
                 <span>{{ userresultsPage * userresultsPageRow - userresultsPageRow + 1
-                }} to {{ userresultsPage * userresultsPageRow }}
+                  }} to {{ userresultsPage * userresultsPageRow }}
                 </span>
               </li>
               <li class="page_btn">
@@ -761,24 +759,7 @@
   <div class="toast-content" style="position:fixed;top: 0px;bottom: 0px;left: 0px;right: 0px; display: none;">
     <div class="toast-message">{{ errorMessage }}</div>
   </div>
-  <div class="loading" v-show="loader" style="/* display: none; */">
-    <div class="v-dialog v-dialog--persistent" style="width: 300px; display: block;">
-      <div class="v-card v-sheet theme--dark teal">
-        <div class="v-card__text"><span>Loading</span>
-          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-linear mb-0"
-            style="height: 7px;">
-            <div class="v-progress-linear__background white" style="height: 7px; opacity: 0.3; width: 100%;"></div>
-            <div class="v-progress-linear__bar">
-              <div class="v-progress-linear__bar__indeterminate v-progress-linear__bar__indeterminate--active">
-                <div class="v-progress-linear__bar__indeterminate long white"></div>
-                <div class="v-progress-linear__bar__indeterminate short white"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Loader :isShow="loader" />
 
   <Footer />
   <PageReload />
@@ -790,11 +771,12 @@ import axios from "axios";
 import { ref, watch } from "vue";
 import Footer from "../../../components/CommonFooter.vue";
 import PageReload from "../../../components/PageReload.vue";
-
+import Loader from "../../../components/UserLoader.vue";
 export default {
   components: {
     Footer,
     PageReload,
+    Loader
   },
   props: {
     toggleLoader: { type: Function },
