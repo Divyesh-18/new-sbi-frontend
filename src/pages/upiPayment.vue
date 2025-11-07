@@ -285,7 +285,7 @@ const submitPayment = async () => {
     try {
         const res = await axios.post("/recharge", {
             amount: userAmount.value,
-            rechargetype: "Cash Pay",
+            rechargetype: "CashPay",
             reference: refNo.value,
         });
 

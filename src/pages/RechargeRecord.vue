@@ -28,9 +28,11 @@
               <p>
                 <span class="times" v-if="item.rechargetype === 'USDTPAYMENT' && item.usdtAmount">
                   ₮{{item.usdtAmount}}</span><br>
-                <span class="times" v-if="item.rechargetype !== null && item.rechargetype !== 'USDTPAYMENT'">SBI{{
+                <span class="times"
+                  v-if="item.rechargetype !== null && item.rechargetype !== 'USDTPAYMENT'">pokerbaazi{{
                   item.rechargetype}}</span>
-                <span class="times" v-else><span v-if="item.rechargetype !== 'USDTPAYMENT'">SBI</span></span>{{ item.orderid }}
+                <span class="times" v-else><span v-if="item.rechargetype !== 'USDTPAYMENT'">SBI</span></span>{{
+                item.orderid }}
               </p>
               <p class="times" v-if="item.rechargetype == NULL">QePay</p>
               <p class="times" v-if="item.rechargetype != NULL">{{ item.rechargetype }}</p>

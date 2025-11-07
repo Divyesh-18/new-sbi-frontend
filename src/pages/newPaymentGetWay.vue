@@ -177,7 +177,7 @@ const submitUTR = async () => {
     try {
         const res = await axios.post("/recharge", {
             amount: amount.value,
-            rechargetype: "UPI Payment",
+            rechargetype: "UPIPayment",
             reference: utr.value,
         });
 
