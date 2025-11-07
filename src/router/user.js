@@ -47,6 +47,7 @@ import NewPayment from "../pages/NewPayment.vue";
 import UpiPayment from "../pages/upiPayment.vue";
 import USDTPayment from "../pages/USDTpayment.vue";
 import fastWinOrder from "../pages/GameWin/fastWinGame/oneMinuteOrder.vue";
+import newPaymentGetWay from "../pages/newPaymentGetWay.vue";
 
 export const routes = [
   {
@@ -283,5 +284,10 @@ export const routes = [
     path: "/fastwinorder",
     name: "fastWinOrder",
     component: fastWinOrder,
-  }
+  },
+  {
+    path: "/payment-get-way",
+    name: "newPaymentGetWay",
+    component: newPaymentGetWay,
+  },
 ];

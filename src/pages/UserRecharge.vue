@@ -246,7 +246,7 @@ export default {
           // }
           if (radio.value === 1) {
             router.push({
-              name: "NewPayment",
+              name: "newPaymentGetWay",
               query: { goodsId: values.userammount },
             });
           }
