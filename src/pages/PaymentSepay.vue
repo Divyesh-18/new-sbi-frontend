@@ -251,7 +251,7 @@ export default {
     const countDown = ref(1800);
 
     const countDown1 = ref(20);
-    const isNoticeModalVisible = ref(true);
+    const isNoticeModalVisible = ref(false);
 
     let noticeInterval = null;
     let mainTimer = null;
