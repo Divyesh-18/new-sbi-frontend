@@ -258,7 +258,7 @@ export default {
           } */
           if (radio.value === 2) {
             router.push({
-              name: "ekpay",
+              name: "sepay",
               query: { goodsId: values.userammount },
             });
           }

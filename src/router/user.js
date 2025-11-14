@@ -35,6 +35,7 @@ import Rechargerecord from "../pages/RechargeRecord.vue";
 import RedEnvelope from "../pages/RedEnvelope.vue";
 import FinalPayment from "../pages/FinalPayment.vue";
 import Ekpay from "../pages/PaymentEkpay.vue";
+import Sepay from "../pages/PaymentSepay.vue";
 import Parity from "../pages/GameParity.vue";
 import Emerd from "../pages/GameEmerd.vue";
 import Myteam from "../pages/MyTeam.vue";
@@ -89,6 +90,11 @@ export const routes = [
     path: "/ekpay",
     name: "ekpay",
     component: Ekpay,
+  },
+  {
+    path: "/sepay",
+    name: "sepay",
+    component: Sepay,
   },
   {
     path: "/redenvelopes",
